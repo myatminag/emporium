@@ -1,4 +1,4 @@
-import { ButtonDemo } from 'packages/ui/src/index';
+import { ButtonDemo } from 'packages/ui/src';
 
 export default async function Index() {
   return (
