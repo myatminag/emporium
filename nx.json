@@ -45,6 +45,14 @@
       "options": {
         "targetName": "lint"
       }
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
     }
   ],
   "targetDefaults": {
@@ -56,6 +64,11 @@
         "{workspaceRoot}/.eslintignore",
         "{workspaceRoot}/eslint.config.js"
       ]
+    },
+    "@nx/js:swc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
@@ -64,6 +77,9 @@
         "style": "css",
         "linter": "eslint"
       }
+    },
+    "@nx/react": {
+      "library": {}
     }
   },
   "nxCloudAccessToken": "NDIxZWU2N2UtMmM4Yy00NjkyLThkYjMtMzhlZjJlNzljZmI3fHJlYWQtd3JpdGU="
