@@ -26,7 +26,7 @@ const Login = () => {
         }}
         bg="primary.7"
       >
-        Hi
+        Hello
       </Box>
 
       <Flex

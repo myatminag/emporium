@@ -1,7 +1,7 @@
 module.exports = {
-  '{apps,packages}/{user,admin}/**/*.{ts,tsx}': (files) => {
-    return `pnpm nx affected --target=typecheck --files=${files.join(',')}`;
-  },
+  '{apps,packages}/**/*.{ts,tsx}': () => [
+    'pnpm nx affected --target=type-check',
+  ],
   // '*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
   // '*.{js,ts,tsx}': () => [
   //   'pnpm nx affected:lint --untracked=false --fix',
