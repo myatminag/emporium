@@ -1,9 +1,9 @@
-import { ButtonDemo } from 'packages/ui/src';
+import Link from 'next/link';
 
 export default async function Index() {
   return (
     <div className="flex min-h-screen w-full items-center justify-center">
-      <ButtonDemo />
+      <Link href="/login">Login</Link>
     </div>
   );
 }

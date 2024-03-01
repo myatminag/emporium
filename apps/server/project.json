@@ -1,21 +1,21 @@
 {
-  "name": "backend",
+  "name": "server",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/backend/src",
+  "sourceRoot": "apps/server/src",
   "projectType": "application",
   "targets": {
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "backend:build"
+        "buildTarget": "server:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "backend:build:development"
+          "buildTarget": "server:build:development"
         },
         "production": {
-          "buildTarget": "backend:build:production"
+          "buildTarget": "server:build:production"
         }
       }
     }

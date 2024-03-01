@@ -1,9 +1,15 @@
-import { Button } from '@mantine/core';
+import { MantineStyleProps, Button } from '@mantine/core';
 
-export const ButtonDemo = () => {
+interface Props {
+  text: string;
+  size: string;
+  styles?: MantineStyleProps;
+}
+
+export const ButtonFilled = ({ text, size, styles }: Props) => {
   return (
-    <Button variant="filled" color="neutral.8">
-      Click Me!
+    <Button variant="filled" size={size} {...styles}>
+      {text}
     </Button>
   );
 };
