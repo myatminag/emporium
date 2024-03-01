@@ -1,7 +1,7 @@
 module.exports = {
   '{packages,apps}/**/*.{js,ts,tsx}': [
-    'pnpm nx affected --target lint --uncommitted --fix true',
-    'pnpm nx affected --target test --uncommitted',
+    'pnpm nx affected:lint --uncommitted --fix true',
+    'pnpm nx affected:test --uncommitted',
     'pnpm nx format:write --uncommitted',
   ],
   // '*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
