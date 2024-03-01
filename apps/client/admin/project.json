@@ -3,6 +3,15 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/frontend/admin",
   "projectType": "application",
-  "targets": {},
+  "targets": {
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p tsconfig.json --noEmit"],
+        "cwd": "apps/client/admin",
+        "forwardAllArgs": false
+      }
+    }
+  },
   "tags": []
 }

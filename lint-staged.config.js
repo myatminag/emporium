@@ -1,6 +1,6 @@
 module.exports = {
-  '{apps,libs,tools}/**/*.{ts,tsx}': (files) => {
-    return `pnpm nx affected --target=typecheck --files=${files.join(',')}`;
+  '{apps,packages}/**/*.{ts,tsx}': (files) => {
+    return `pnpm nx affected --target=type-check --files=${files.join(',')}`;
   },
   // '*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
   // '*.{js,ts,tsx}': () => [

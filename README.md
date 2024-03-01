@@ -20,6 +20,16 @@ Run `pnpm nx build admin` to build the **admin** application.
 
 Run `pnpm nx build backend` to build the **backend** application.
 
+## Type Check
+
+Run `pnpm nx run user:type-check` to check the type error of **user** application.
+
+Run `pnpm nx run admin:type-check` to check the type error of **admin** application.
+
+Run `pnpm nx affected --target=type-check` to type check all affected apps and libraries
+that have a typecheck target in their project.json. On the other hand, `affected` command
+is used to determine what parts of your codebase are affected by changes you've made.
+
 ## Running tasks
 
 To execute tasks with Nx use the following syntax:

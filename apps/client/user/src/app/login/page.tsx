@@ -25,7 +25,9 @@ const Login = () => {
           lg: '100vh',
         }}
         bg="primary.7"
-      ></Box>
+      >
+        Hello
+      </Box>
 
       <Flex
         direction="column"
