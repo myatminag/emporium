@@ -2,10 +2,8 @@ module.exports = {
   '{apps,packages}/**/*.{ts,tsx}': () => [
     'pnpm nx affected --target=type-check',
   ],
-  // '*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
-  // '*.{js,ts,tsx}': () => [
-  //   'pnpm nx affected:lint --untracked=false --fix',
-  //   'ppnm nx affected:test --untracked=false --color',
-  //   'pnpm nx affected:build --untracked=false',
-  // ],
+  '{apps,packages}/**/*.{js,ts,jsx,tsx,json}': [
+    'pnpm nx affected:lint',
+    'pnpm nx format:write',
+  ],
 };
