@@ -1,9 +1,13 @@
 module.exports = {
-  '{apps,packages}/**/*.{ts,tsx}': (files) => {
-    return `nx affected --target=typecheck --files=${files.join(',')}`;
-  },
-  '{apps,packages}/**/*.{js,ts,jsx,tsx,json}': [
-    (files) => `nx affected:lint --files=${files.join(',')}`,
-    (files) => `nx format:write --files=${files.join(',')}`,
+  '{packages,apps}/**/*.{js,ts,tsx}': [
+    'pnpm nx affected --target lint --uncommitted --fix true',
+    'pnpm nx affected --target test --uncommitted',
+    'pnpm nx format:write --uncommitted',
   ],
+  // '*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
+  // '*.{js,ts,tsx}': () => [
+  //   'pnpm nx affected:lint --untracked=false --fix',
+  //   'ppnm nx affected:test --untracked=false --color',
+  //   'pnpm nx affected:build --untracked=false',
+  // ],
 };
