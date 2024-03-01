@@ -1,5 +1,5 @@
 module.exports = {
-  '{apps,packages}/**/**/*.{ts,tsx}': (files) => {
+  '{apps,packages}/**/*.{ts,tsx}': (files) => {
     return `pnpm nx affected --target=type-check --files=${files.join(',')}`;
   },
   // '*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
