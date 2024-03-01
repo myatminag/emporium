@@ -1,8 +1,8 @@
 # Ecommerce
 
-## Start the application
-
 Happy coding!
+
+## Start the application
 
 Run `pnpm nx dev user` to start the **user** development server.
 
