@@ -43,3 +43,30 @@ export const PasswordInputField = ({
     />
   );
 };
+
+interface SearchInputProps {
+  placeholder: string;
+  icon: React.ReactNode;
+  visibleFrom?: string;
+  hiddenFrom?: string;
+  styles?: MantineStyleProps;
+}
+
+export const SearchInputField = ({
+  placeholder,
+  icon,
+  visibleFrom,
+  hiddenFrom,
+  styles,
+}: SearchInputProps) => {
+  return (
+    <TextInput
+      placeholder={placeholder}
+      leftSection={icon}
+      leftSectionPointerEvents="none"
+      {...styles}
+      visibleFrom={visibleFrom}
+      hiddenFrom={hiddenFrom}
+    />
+  );
+};

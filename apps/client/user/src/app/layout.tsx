@@ -1,9 +1,10 @@
 import './global.css';
 import '@mantine/core/styles.css';
 
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, Container } from '@mantine/core';
 
 import { theme } from 'packages/ui/src';
+import Navbar from '../components/navbar';
 
 export const metadata = {
   title: 'Welcome to user',
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <Navbar />
+          <Container size="xl">{children}</Container>
+        </MantineProvider>
       </body>
     </html>
   );
