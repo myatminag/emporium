@@ -28,7 +28,7 @@ export const theme = createTheme({
       '#0044b0',
     ],
     neutral: [
-      '#F9FAFB',
+      '#F6F6F6',
       '#F3F4F6',
       '#E5E7EB',
       '#D3D5DA',
