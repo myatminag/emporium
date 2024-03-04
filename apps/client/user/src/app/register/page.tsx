@@ -9,7 +9,7 @@ import {
   ButtonFilled,
 } from 'packages/ui/src';
 
-const Login = () => {
+const Register = () => {
   return (
     <Center maw="100vw" h="100vh">
       <Stack
@@ -19,8 +19,20 @@ const Login = () => {
         }}
       >
         <Title order={2} fw={500} ta="center">
-          Login
+          Register
         </Title>
+        <TextInputField
+          label="Username"
+          placeholder="Enter your username"
+          size="md"
+          withAsterisk
+        />
+        <TextInputField
+          label="Phone Number"
+          placeholder="Enter your phone number"
+          size="md"
+          withAsterisk
+        />
         <TextInputField
           label="Email"
           placeholder="Enter your email"
@@ -29,31 +41,27 @@ const Login = () => {
         />
         <PasswordInputField
           label="Password"
-          placeholder="Enter your password"
+          placeholder="Enter password"
           size="md"
           withAsterisk
         />
-        <Text
-          fz="base"
-          td="underline"
-          c="primary.7"
-          ta="center"
-          component={Link}
-          href="/reset-password"
-        >
-          Forgot your password?
-        </Text>
-        <ButtonFilled size="md" text="Login" />
+        <PasswordInputField
+          label="Confirm Password"
+          placeholder="Enter confirm password"
+          size="md"
+          withAsterisk
+        />
+        <ButtonFilled size="md" text="Register" />
         <Flex align="center" justify="center" gap="5px">
-          <Text fz="md">Don&apos;t have an account? </Text>
+          <Text fz="md">Already have an account? </Text>
           <Text
             fz="md"
             c="primary.5"
             component={Link}
-            href="/register"
+            href="/login"
             td="underline"
           >
-            Create account
+            Login
           </Text>
         </Flex>
       </Stack>
@@ -61,4 +69,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
