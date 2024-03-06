@@ -13,7 +13,7 @@ import {
 } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 
-import classes from '../styles/carousel.module.css';
+import classes from '../styles/home.module.css';
 import { NextControlIcon, PreviousControlIcon } from '@ecommerce/ui';
 
 import ProductImage from '../assets/image 34.png';
@@ -54,7 +54,7 @@ export default function Index() {
 
       <Stack gap="xs">
         <Title order={2}>New Arrival</Title>
-        <Text>Browse the best of our new arrivals.</Text>
+        <Text fz="md">Browse the best of our new arrivals.</Text>
         <Carousel
           loop
           dragFree
@@ -69,22 +69,17 @@ export default function Index() {
           {[...Array(8)].map((_, i) => (
             <Carousel.Slide key={i}>
               <Card radius="md" bg="#ffffff" withBorder>
-                <Card.Section
-                  withBorder
-                  className={classes.card}
-                  h={{
-                    base: '180px',
-                  }}
-                >
+                <Card.Section withBorder className={classes.card} h="180px">
                   <Image
                     src={ProductImage}
                     height={300}
                     width={500}
                     alt="product-image"
+                    // className={classes.image}
                     style={{
+                      scale: 0.9,
                       width: '100%',
-                      objectFit: 'cover',
-                      scale: '0.8',
+                      height: '130px',
                     }}
                   />
                 </Card.Section>

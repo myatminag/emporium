@@ -15,3 +15,9 @@
   align-items: center;
   width: auto;
 }
+
+.image {
+
+  object-fit: cover;
+  scale: 0.5;
+}
