@@ -13,6 +13,7 @@ export const theme = createTheme({
     '3xl': '38px',
     '4xl': '48px',
   },
+  white: '#f5f5f5',
   primaryColor: 'primary',
   colors: {
     primary: [
