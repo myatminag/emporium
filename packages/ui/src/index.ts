@@ -11,3 +11,4 @@ export * from './icons/search-icon';
 export * from './icons/wishlist-icon';
 export * from './icons/order-icon';
 export * from './icons/arrow-icon';
+export * from './icons/chevron-icon';

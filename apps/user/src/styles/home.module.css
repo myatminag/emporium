@@ -9,15 +9,16 @@
   }
 }
 
-.card {
+.cardSection {
   display: flex;
   justify-items: center;
   align-items: center;
-  width: auto;
+  position: relative;
 }
 
-.image {
-
-  object-fit: cover;
-  scale: 0.5;
+.promotion {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  right: 10px;
+  pointer-events: none;
 }

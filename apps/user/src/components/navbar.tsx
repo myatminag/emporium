@@ -37,33 +37,35 @@ const Navbar = () => {
     >
       <Container size="xl">
         <Group justify="space-between" align="center" h="100%">
-          <Burger
-            size="sm"
-            opened={openDrawer}
-            onClick={toggleDrawer}
-            aria-label="Toggle navigation"
-            hiddenFrom="lg"
-            color="#111827"
-          />
+          <Group gap="sm">
+            <Burger
+              size="sm"
+              opened={openDrawer}
+              onClick={toggleDrawer}
+              aria-label="Toggle navigation"
+              hiddenFrom="lg"
+              color="#111827"
+            />
 
-          <Group gap="xs">
-            <MainLogo />
-            <Text
-              ta="center"
-              fw="bold"
-              fz="xl"
-              c="#CF202D"
-              component={Link}
-              href="/"
-            >
-              Emporium
-            </Text>
+            <Group gap="xs">
+              <MainLogo />
+              <Text
+                ta="center"
+                fw="bold"
+                fz="xl"
+                c="primary.7"
+                component={Link}
+                href="/"
+              >
+                Emporium
+              </Text>
+            </Group>
           </Group>
 
           <Group align="center" gap="1.5rem" visibleFrom="lg">
             <SearchInputField
               placeholder="Search..."
-              icon={<SearchIcon color="#CF202D" />}
+              icon={<SearchIcon color="#0059DC" />}
               styles={{
                 w: '300px',
               }}
