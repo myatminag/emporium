@@ -1,7 +1,7 @@
 {
-  "name": "libs",
+  "name": "lib",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/libs/src",
+  "sourceRoot": "packages/lib/src",
   "projectType": "library",
   "tags": [],
   "targets": {}

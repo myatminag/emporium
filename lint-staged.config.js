@@ -1,9 +1,8 @@
 module.exports = {
-  '(apps,packages)/**/*.{ts,tsx}': () => [
-    'pnpm nx affected --target=type-check',
-  ],
-  '(apps,packages)/**/*.{js,ts,jsx,tsx,json}': [
-    'pnpm nx affected:lint',
-    'pnpm nx format:write',
-  ],
+  // Target specific folders for type checking (if needed)
+  'apps/**/*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
+  'packages/**/*.{ts,tsx}': () => ['pnpm nx affected --target=type-check'],
+
+  // Use lint-staged built-in globbing for staged files
+  '**/*.{js,ts,jsx,tsx}': ['pnpm nx affected:lint', 'pnpm nx format:write'],
 };
