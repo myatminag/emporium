@@ -1,12 +1,5 @@
 import './global.css';
-import '@mantine/core/styles.css';
-import '@mantine/carousel/styles.css';
 import { Roboto } from 'next/font/google';
-
-import { MantineProvider, Container } from '@mantine/core';
-
-import { theme } from 'packages/ui/src';
-import Navbar from '../components/navbar';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -25,12 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <MantineProvider theme={theme}>
-          <Navbar />
-          <Container size="xl">{children}</Container>
-        </MantineProvider>
-      </body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

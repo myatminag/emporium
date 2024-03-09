@@ -1,17 +1,17 @@
 {
   "name": "utils",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/utils/src",
+  "sourceRoot": "packages/utils/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/utils",
-        "main": "libs/utils/src/index.ts",
-        "tsConfig": "libs/utils/tsconfig.lib.json",
-        "assets": ["libs/utils/*.md"]
+        "outputPath": "dist/packages/utils",
+        "main": "packages/utils/src/index.ts",
+        "tsConfig": "packages/utils/tsconfig.lib.json",
+        "assets": ["packages/utils/*.md"]
       }
     }
   },
