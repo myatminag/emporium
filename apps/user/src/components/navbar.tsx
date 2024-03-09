@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { CartIcon } from 'packages/ui/src';
 import { UserIcon } from 'packages/ui/src';
 import { WishListIcon } from 'packages/ui/src';
@@ -8,18 +10,20 @@ import { MainLogo } from 'packages/ui/src';
 
 const Navbar = () => {
   return (
-    <nav className="container justify-between items-center flex h-20">
+    <nav className="container flex h-20 items-center justify-between">
       <div className="flex items-center gap-x-3">
         <div className="block lg:hidden">Burger</div>
         <div className="flex items-center gap-x-1.5">
           <MainLogo />
-          <h3 className="text-[#EB001B] text-xl font-semibold">Emporium</h3>
+          <h3 className="text-xl font-semibold text-[#EB001B]">Emporium</h3>
         </div>
       </div>
 
       <ul className="hidden lg:flex lg:items-center lg:gap-x-5">
         <li>
-          <CartIcon color="#111827" />
+          <Link href="/cart">
+            <CartIcon className="text-[#111827]" />
+          </Link>
         </li>
         <li>
           <OrderIcon color="#111827" />
