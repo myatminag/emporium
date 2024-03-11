@@ -1,7 +1,7 @@
 {
   "name": "user",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/frontend/user",
+  "sourceRoot": "apps/user",
   "projectType": "application",
   "targets": {
     "type-check": {
@@ -10,6 +10,12 @@
         "commands": ["tsc -p tsconfig.json --noEmit"],
         "cwd": "apps/user",
         "forwardAllArgs": false
+      }
+    },
+    "build": {
+      "executor": "@nx/web:webpack",
+      "options": {
+        "postcssConfig": "apps/user/postcss.config.js"
       }
     }
   },

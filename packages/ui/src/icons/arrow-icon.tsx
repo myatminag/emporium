@@ -20,7 +20,7 @@ export const NextControlIcon = (props: SVGProps<SVGSVGElement>) => {
         transform="matrix(-1 0 0 1 40 0)"
       ></circle>
       <path
-        stroke="#CF202D"
+        stroke="#0059DC"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.5"
@@ -49,7 +49,7 @@ export const PreviousControlIcon = (props: SVGProps<SVGSVGElement>) => {
         strokeWidth="8"
       ></circle>
       <path
-        stroke="#CF202D"
+        stroke="#0059DC"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.5"

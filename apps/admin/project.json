@@ -1,7 +1,7 @@
 {
   "name": "admin",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/frontend/admin",
+  "sourceRoot": "apps/admin",
   "projectType": "application",
   "targets": {
     "type-check": {
@@ -10,6 +10,12 @@
         "commands": ["tsc -p tsconfig.json --noEmit"],
         "cwd": "apps/admin",
         "forwardAllArgs": false
+      }
+    },
+    "build": {
+      "executor": "@nx/web:webpack",
+      "options": {
+        "postcssConfig": "apps/admin/postcss.config.js"
       }
     }
   },
