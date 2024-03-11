@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="block lg:hidden">Burger</div>
         <div className="flex items-center gap-x-1.5">
           <MainLogo />
-          <h3 className="text-xl font-semibold text-[#EB001B]">Emporium</h3>
+          <h3 className="text-primary text-xl font-semibold">Emporium</h3>
         </div>
       </div>
 

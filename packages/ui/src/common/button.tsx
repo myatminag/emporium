@@ -1,5 +1,13 @@
-const Button = () => {
-  return <div>Enter</div>;
-};
+import { Button } from '@nextui-org/react';
 
-export default Button;
+interface PrimaryBtnProps {
+  text: string;
+}
+
+export const PrimaryBtn = ({ text }: PrimaryBtnProps) => {
+  return (
+    <Button color="primary" variant="solid">
+      {text}
+    </Button>
+  );
+};
