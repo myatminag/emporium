@@ -10,7 +10,7 @@ const NewArrival = () => {
         <p className="text-lg font-medium">New Arrival</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon color="#EB001B" />
+          <RightChevronIcon className="text-primary" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">

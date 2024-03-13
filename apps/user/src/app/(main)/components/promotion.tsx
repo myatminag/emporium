@@ -12,7 +12,7 @@ const Promotion = () => {
         <p className="text-lg font-medium">Promotion</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon color="#EB001B" />
+          <RightChevronIcon className="text-primary" />
         </div>
       </div>
       <Swiper
