@@ -10,14 +10,14 @@ const Categories = () => {
         <p className="text-lg font-medium">Categories</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon color="#EB001B" />
+          <RightChevronIcon className="text-primary" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
-            className="flex items-center justify-evenly rounded border p-3"
+            className="flex items-center justify-evenly rounded border bg-white p-3"
           >
             <p className="text-md">
               Smart <br /> Waches

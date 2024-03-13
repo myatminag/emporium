@@ -8,8 +8,9 @@ export const MainLogo = (props: SVGProps<SVGSVGElement>) => {
       height="44"
       fill="none"
       viewBox="0 0 44 44"
+      {...props}
     >
-      <g fillRule="evenodd" clipRule="evenodd" opacity="0.8">
+      <g fillRule="evenodd" clipRule="evenodd">
         <path
           fill="#EB001B"
           fillOpacity="0.2"

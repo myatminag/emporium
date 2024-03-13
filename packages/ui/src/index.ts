@@ -15,3 +15,4 @@ export * from './icons/mail-icon';
 export * from './icons/social-icon';
 export * from './icons/app-icon';
 export * from './icons/service.icon';
+export * from './icons/menu-icon';
