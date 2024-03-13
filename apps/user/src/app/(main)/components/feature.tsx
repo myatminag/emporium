@@ -3,18 +3,18 @@ import Image from 'next/image';
 import { RightChevronIcon } from '@ecommerce/ui';
 import ProductImg from '../../../assets/image-1.png';
 
-const NewArrival = () => {
+const Feature = () => {
   return (
     <div className="flex flex-col gap-y-3">
       <div className="flex items-center justify-between gap-x-3">
-        <p className="text-lg font-medium">New Arrival</p>
+        <p className="text-lg font-medium">Feature Products</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
           <RightChevronIcon color="#EB001B" />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
-        {[...Array(6)].map((_, i) => (
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-6">
+        {[...Array(24)].map((_, i) => (
           <div key={i} className="rounded border bg-white outline-none">
             <div className="bg-neutral px-3 py-5">
               <Image
@@ -38,4 +38,4 @@ const NewArrival = () => {
   );
 };
 
-export default NewArrival;
+export default Feature;

@@ -7,7 +7,7 @@ import {
 
 const Service = () => {
   return (
-    <section className="flex justify-evenly rounded-sm border p-3">
+    <section className="hidden rounded-sm border bg-white p-3 lg:flex lg:justify-evenly">
       <div className="flex items-center gap-x-3">
         <DeliveryIcon className="w-7" />
         <div className="flex flex-col">

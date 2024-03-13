@@ -1,10 +1,13 @@
 'use client';
 
+import Link from 'next/link';
+import Image from 'next/image';
+import { Divider } from '@nextui-org/react';
+
 import {
   MainLogo,
   FacebookIcon,
   TwitterIcon,
-  YoutubeIcon,
   AppStoreIcon,
   PlayStoreIcon,
 } from '@ecommerce/ui';
@@ -61,95 +64,77 @@ const Footer = () => {
   // });
 
   return (
-    <>
-      {/* <Container size="lg" pt={{ base: 'md', lg: '3rem' }}>
-        <Group justify="space-between" align="start">
-          <Stack maw="300px">
-            <Group gap="xs">
-              <MainLogo />
-              <Text ta="center" fw="bold" fz="xl" c="#EB001B">
-                Emporium
-              </Text>
-            </Group>
-            <Text c="#606060" fz="base">
-              Best information about the company gies here but now lorem ipsum
-              is
-            </Text>
-            <Group wrap="nowrap">
-              <ActionIcon size="lg" color="gray" variant="subtle">
-                <TwitterIcon />
-              </ActionIcon>
-              <ActionIcon size="lg" color="gray" variant="subtle">
-                <FacebookIcon />
-              </ActionIcon>
-              <ActionIcon size="lg" color="gray" variant="subtle">
-                <YoutubeIcon />
-              </ActionIcon>
-            </Group>
-          </Stack>
-          <Group gap="5rem" align="start">
-            <Stack>
-              <Title order={4}>About</Title>
-              <Text c="#606060" fz="base">
-                About Us
-              </Text>
-              <Text c="#606060" fz="base">
-                Categories
-              </Text>
-              <Text c="#606060" fz="base">
-                Find Store
-              </Text>
-              <Text c="#606060" fz="base">
-                About Us
-              </Text>
-            </Stack>
-            <Stack>
-              <Title order={4}>Users</Title>
-              <Text c="#606060" fz="base">
-                Login
-              </Text>
-              <Text c="#606060" fz="base">
-                Register
-              </Text>
-              <Text c="#606060" fz="base">
-                Profile
-              </Text>
-              <Text c="#606060" fz="base">
-                Orders
-              </Text>
-            </Stack>
-            <Stack>
-              <Title order={4}>Information</Title>
-              <Text c="#606060" fz="base">
-                Support
-              </Text>
-              <Text c="#606060" fz="base">
-                Shipping
-              </Text>
-              <Text c="#606060" fz="base">
-                Refund
-              </Text>
-              <Text c="#606060" fz="base">
-                Contact Us
-              </Text>
-            </Stack>
-            <Stack>
-              <Title order={4}>Get App</Title>
-              <AppStoreIcon />
-              <PlayStoreIcon />
-            </Stack>
-          </Group>
-        </Group>
-      </Container>
-
-      <Container size="lg" pb={{ base: 'md', lg: 'xl' }}>
-        <Divider my="xl" />
-
-        <Text c="dimmed" size="sm" ta="center">
-          © {new Date().getFullYear()} Emporium all rights reserved.
-        </Text>
-      </Container> */}
-    </>
+    <footer className="container w-full py-6 lg:py-8">
+      <div className="md:flex md:justify-between">
+        <div className="mb-6 md:mb-0">
+          <div className="flex items-center gap-x-3">
+            <MainLogo />
+            <h3 className="text-primary text-xl font-medium">Emporium</h3>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-6">
+          <div>
+            <h2 className="mb-6 text-base font-medium uppercase text-neutral-900">
+              About
+            </h2>
+            <ul className="flex flex-col gap-y-4 text-base text-neutral-600">
+              <li>About Us</li>
+              <li>Categories</li>
+              <li>Find Store</li>
+              <li>Policy</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-base font-medium uppercase text-neutral-900">
+              Users
+            </h2>
+            <ul className="flex flex-col gap-y-4 text-base text-neutral-600">
+              <li>Login</li>
+              <li>Register</li>
+              <li>Profile</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-base font-medium uppercase text-neutral-900">
+              Information
+            </h2>
+            <ul className="flex flex-col gap-y-4 text-base text-neutral-600">
+              <li>Support</li>
+              <li>Shipping</li>
+              <li>Refund</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-base font-medium uppercase text-neutral-900">
+              Get App
+            </h2>
+            <ul className="flex flex-col gap-y-4">
+              <li>
+                <AppStoreIcon />
+              </li>
+              <li>
+                <PlayStoreIcon />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <Divider className="my-8" />
+      <div className="lg:item flex flex-col items-center justify-center lg:flex-row lg:justify-between">
+        <span className="text-sm text-gray-600 sm:text-center dark:text-gray-400">
+          © {new Date().getFullYear()}{' '}
+          <a href="https://flowbite.com/" className="hover:underline">
+            Emporium™
+          </a>
+          . All Rights Reserved.
+        </span>
+        <div className="mt-5 flex items-center gap-x-3 lg:mt-0">
+          <FacebookIcon className="hover:text-primary h-4 w-4 cursor-pointer text-neutral-600" />
+          <TwitterIcon className="hover:text-primary h-4 w-4 cursor-pointer text-neutral-600" />
+        </div>
+      </div>
+    </footer>
   );
 };
 
