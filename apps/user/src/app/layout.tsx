@@ -1,6 +1,8 @@
 import './global.css';
 import { Roboto } from 'next/font/google';
 
+import { PrelineScript } from '@ecommerce/lib';
+
 import Provider from './provider';
 
 const roboto = Roboto({
@@ -23,6 +25,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Provider>{children}</Provider>
       </body>
+      <PrelineScript />
     </html>
   );
 }

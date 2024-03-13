@@ -1,21 +1,34 @@
 import { SVGProps } from 'react';
 
-export const RightChevronIcon = (props: SVGProps<SVGSVGElement>) => {
+// utils
+import { cn } from '@ecommerce/lib';
+
+export const ChevronIcon = ({
+  direction,
+  className,
+  ...props
+}: SVGProps<SVGSVGElement> & {
+  direction?: 'left' | 'right' | 'up' | 'down';
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
-      height="18"
+      height="17"
       fill="none"
-      viewBox="0 0 18 18"
+      viewBox="0 0 18 17"
       {...props}
+      className={cn('md:cursor-pointer', className, {
+        'rotate-180': direction === 'up',
+        '-rotate-90': direction === 'right',
+        'rotate-90': direction === 'left',
+      })}
     >
       <path
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        d="M6.375 3.75L11.625 9l-5.25 5.25"
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M9.627 10.244a.695.695 0 01-.983 0L5.166 6.766a.696.696 0 01.984-.983l2.985 2.985 2.986-2.985a.696.696 0 01.984.983l-3.478 3.478z"
+        clipRule="evenodd"
       ></path>
     </svg>
   );

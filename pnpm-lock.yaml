@@ -29,6 +29,9 @@ dependencies:
   pg:
     specifier: ^8.11.3
     version: 8.11.3
+  preline:
+    specifier: ^2.0.3
+    version: 2.0.3
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -4374,6 +4377,10 @@ packages:
     engines: {node: '>=14'}
     requiresBuild: true
     optional: true
+
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+    dev: false
 
   /@react-aria/breadcrumbs@3.5.11(react@18.2.0):
     resolution: {integrity: sha512-bQz4g2tKvcWxeqPGj9O0RQf++Ka8f2o/pJMJB+QQ27DVQWhxpQpND//oFku2aFYkxHB/fyD9qVoiqpQR25bidw==}
@@ -12754,6 +12761,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       xtend: 4.0.2
+    dev: false
+
+  /preline@2.0.3:
+    resolution: {integrity: sha512-V/sLmRIHd23UCdvJNRKKszntgUqA0381erVzRpQ48NjjMOgI7DyFW4mr+lg387V0oeBc5Dx9Jxa5voppVoH9GA==}
+    dependencies:
+      '@popperjs/core': 2.11.8
     dev: false
 
   /prelude-ls@1.2.1:

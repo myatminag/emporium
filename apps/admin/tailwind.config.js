@@ -1,6 +1,5 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
-const { nextui } = require('@nextui-org/react');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,7 +9,7 @@ module.exports = {
       '{src,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}',
     ),
     ...createGlobPatternsForDependencies(__dirname),
-    '../../node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/preline/preline.js',
   ],
   darkMode: 'class',
   theme: {
@@ -73,15 +72,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    nextui({
-      layout: {
-        radius: {
-          small: '6px',
-          medium: '10px',
-          large: '12px',
-        },
-      },
-    }),
-  ],
+  plugins: [require('preline/plugin')],
 };

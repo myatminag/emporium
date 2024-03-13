@@ -1,5 +1,13 @@
+import { Roboto } from 'next/font/google';
+
 import './global.css';
 import Provider from './provider';
+import { PrelineScript } from '@ecommerce/lib';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700', '900'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Welcome to admin',
@@ -13,11 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={roboto.className}>
         <Provider>
           <main className="bg-[#f8fafc]">{children}</main>
         </Provider>
       </body>
+      <PrelineScript />
     </html>
   );
 }

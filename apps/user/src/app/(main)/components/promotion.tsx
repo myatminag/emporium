@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-import { RightChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from '@ecommerce/ui';
 import ProductImg from '../../../assets/image 34.png';
 
 const Promotion = () => {
@@ -12,7 +12,7 @@ const Promotion = () => {
         <p className="text-lg font-medium">Promotion</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon className="text-primary" />
+          <ChevronIcon className="text-primary" direction="right" />
         </div>
       </div>
       <Swiper

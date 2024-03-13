@@ -22,3 +22,24 @@ export const OrderIcon = (props: SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
+
+export const DashboardOrderIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M12 12h8.25M12 6h8.25M12 18h8.25M8.625 4.5l-3.253 3L3.75 6M8.625 10.5l-3.253 3L3.75 12M8.625 16.5l-3.253 3L3.75 18"
+      ></path>
+    </svg>
+  );
+};
