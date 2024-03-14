@@ -7,7 +7,7 @@ import { cn } from '@ecommerce/lib';
 import {
   DashboardIcon,
   ChevronIcon,
-  ProductIcon,
+  ProductsIcon,
   LogoutIcon,
   CustomerIcon,
   BannerIcon,
@@ -52,7 +52,7 @@ const Sidebar = () => {
               type="button"
               className="hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:hover:bg-transparent dark:hs-accordion-active:text-white flex w-full items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-start text-base text-neutral-700 hover:bg-gray-100"
             >
-              <ProductIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
+              <ProductsIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
               Products
               <ChevronIcon
                 className="hs-accordion-active:rotate-180 ms-auto size-5"

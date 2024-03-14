@@ -1,5 +1,5 @@
 'use client';
-import { InfoIcon, PhoneIcon, Button } from 'packages/ui/src';
+import { InfoIcon, PhoneIcon, Button, DashboardIcon } from 'packages/ui/src';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -59,7 +59,7 @@ const MyComponent = () => {
             <span className="text-sm">Help Center</span>
           </div>
           <div className=" flex items-center gap-1">
-            <PhoneIcon className="h-4 w-4 text-blue-500" />
+            <DashboardIcon className="h-4 w-4 fill-blue-500" />
             <span className="text-sm">Contact Us : +95 9 797961628 </span>
           </div>
         </div>
