@@ -19,3 +19,4 @@ export * from './icons/info-icon';
 export * from './icons/phone-icon';
 export * from './icons/loader-icon';
 export * from './icons/dashboard-icon';
+export * from './icons/menu-icon';

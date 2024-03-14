@@ -5,11 +5,11 @@ import Footer from '../../components/footer';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <main className="bg-[#f8fafc]">
       <Navbar />
       {children}
       <Footer />
-    </div>
+    </main>
   );
 };
 

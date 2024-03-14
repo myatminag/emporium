@@ -4,15 +4,18 @@ export const WishListIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="32"
+      height="32"
       fill="none"
-      viewBox="0 0 24 24"
+      viewBox="0 0 32 32"
       {...props}
     >
       <path
-        fill="currentColor"
-        d="M16.5 2.825c-1.74 0-3.41.81-4.5 2.09-1.09-1.28-2.76-2.09-4.5-2.09-3.08 0-5.5 2.42-5.5 5.5 0 3.78 3.4 6.86 8.55 11.54l1.45 1.31 1.45-1.32c5.15-4.67 8.55-7.75 8.55-11.53 0-3.08-2.42-5.5-5.5-5.5zm-4.4 15.55l-.1.1-.1-.1C7.14 14.065 4 11.215 4 8.325c0-2 1.5-3.5 3.5-3.5 1.54 0 3.04.99 3.57 2.36h1.87c.52-1.37 2.02-2.36 3.56-2.36 2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16 27S3.5 20 3.5 11.5A6.5 6.5 0 0116 9a6.5 6.5 0 0112.5 2.5C28.5 20 16 27 16 27z"
       ></path>
     </svg>
   );

@@ -1,22 +1,23 @@
 import Image from 'next/image';
 
-import BannerOne from '../../../assets/dummy/banner-1.png';
-import BannerImgTwo from '../../../assets/dummy/banner.png';
+import Widget from '../../../assets/dummy/Widget (2).png';
+import WidgetOne from '../../../assets/dummy/Widget (1).png';
+import WidgetTwo from '../../../assets/dummy/Widget.png';
 
 const Banner = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
       <Image
-        src={BannerImgTwo}
+        src={Widget}
         alt="banner"
         width={500}
         height={500}
-        className="h-full w-full rounded"
+        className="h-full w-full rounded lg:col-span-2"
       />
-      <div className="grid grid-cols-12 gap-4">
-        <div className="col-span-12 md:col-span-12">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-1">
+        <div className="col-span-1">
           <Image
-            src={BannerOne}
+            src={WidgetTwo}
             alt="banner"
             width={500}
             height={500}
@@ -24,19 +25,9 @@ const Banner = () => {
           />
         </div>
 
-        <div className="col-span-6">
+        <div className="col-span-1">
           <Image
-            src={BannerOne}
-            alt="banner"
-            width={500}
-            height={500}
-            className="w-full rounded"
-          />
-        </div>
-
-        <div className="col-span-6">
-          <Image
-            src={BannerOne}
+            src={WidgetOne}
             alt="banner"
             width={500}
             height={500}
