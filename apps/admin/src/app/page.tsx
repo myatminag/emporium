@@ -1,6 +1,3 @@
-'use client';
-
-import React from 'react';
 import Image from 'next/image';
 import { MainLogo } from 'packages/ui/src';
 import LoginForm from '../components/login/LoginForm';

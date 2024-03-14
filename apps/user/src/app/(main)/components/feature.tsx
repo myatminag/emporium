@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { RightChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from '@ecommerce/ui';
 import ProductImg from '../../../assets/image-1.png';
 
 const Feature = () => {
@@ -10,7 +10,7 @@ const Feature = () => {
         <p className="text-lg font-medium">Feature Products</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon color="#EB001B" />
+          <ChevronIcon className="text-primary" direction="right" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-6">

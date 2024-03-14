@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { RightChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from '@ecommerce/ui';
 import Brand from '../../../assets/dummy/brand.png';
 
 const Brands = () => {
@@ -12,7 +12,7 @@ const Brands = () => {
         <p className="text-lg font-medium">Promotion</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon color="#EB001B" />
+          <ChevronIcon className="text-primary" direction="right" />
         </div>
       </div>
       <div className="grid grid-cols-6 gap-4">

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { RightChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from '@ecommerce/ui';
 import Category from '../../../assets/dummy/category.png';
 
 const Categories = () => {
@@ -10,7 +10,7 @@ const Categories = () => {
         <p className="text-lg font-medium">Categories</p>
         <div className="flex items-center gap-x-1.5">
           <p className="text-base">View All</p>
-          <RightChevronIcon className="text-primary" />
+          <ChevronIcon className="text-primary" direction="right" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
