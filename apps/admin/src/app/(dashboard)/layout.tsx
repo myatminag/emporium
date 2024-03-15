@@ -64,7 +64,7 @@ const layout = ({ children }: { children: ReactNode }) => {
         </div>
       </div>
       <Sidebar />
-      <div className=""></div>
+      <div className="min-h-screen w-full lg:ps-64">{children}</div>
     </>
   );
 };
