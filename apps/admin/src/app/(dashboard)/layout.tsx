@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import Sidebar from '../../components/sidebar';
+import Header from './dashboard/components/header';
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -64,7 +65,10 @@ const layout = ({ children }: { children: ReactNode }) => {
         </div>
       </div>
       <Sidebar />
-      <div className=""></div>
+      <main className="min-h-screen w-full lg:ps-64">
+        <Header />
+        {children}
+      </main>
     </>
   );
 };
