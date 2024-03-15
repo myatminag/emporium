@@ -182,12 +182,12 @@ const Sidebar = () => {
             >
               <ul className="ps-2 pt-2">
                 <li>
-                  <a
+                  <Link
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
+                    href="/order-list"
                   >
-                    Link 1
-                  </a>
+                    Order List
+                  </Link>
                 </li>
                 <li>
                   <a

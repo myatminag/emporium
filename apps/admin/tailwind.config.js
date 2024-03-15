@@ -26,7 +26,7 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: '#EB001B',
+          DEFAULT: '#475BE8',
         },
         secondary: {
           DEFAULT: '#111827',
@@ -72,5 +72,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('preline/plugin')],
+  plugins: [require('preline/plugin'), require('@tailwindcss/forms')],
 };

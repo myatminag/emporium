@@ -27,3 +27,5 @@ export * from './icons/brand-icon';
 export * from './icons/point-icon';
 export * from './icons/noti-icon';
 export * from './icons/stats-icon';
+export * from './icons/three-dots-icon';
+export * from './icons/filter-icon';

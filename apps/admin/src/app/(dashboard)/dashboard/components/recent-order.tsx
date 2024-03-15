@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon, ThreeDotsIcon } from '@ecommerce/ui';
 
 const RecentOrder = () => {
   return (
@@ -15,17 +14,19 @@ const RecentOrder = () => {
               <ChevronIcon direction="right" />
             </Link>
           </div>
+
           <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead className="bg-gray-50 dark:bg-slate-800">
               <tr>
+                <th scope="col" className="px-4 py-3 text-start"></th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <span className="text-base uppercase tracking-wide text-neutral-700">
-                    Product
+                    Order ID
                   </span>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <span className="text-base uppercase tracking-wide text-neutral-700">
-                    Customer
+                    Customer Name
                   </span>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
@@ -49,6 +50,14 @@ const RecentOrder = () => {
                     </span>
                   </div>
                 </th>
+                <th scope="col" className="px-4 py-3 text-start">
+                  <div className="flex items-center gap-x-2">
+                    <span className="text-base uppercase tracking-wide text-neutral-700">
+                      Items
+                    </span>
+                  </div>
+                </th>
+                <th scope="col" className="px-4 py-3 text-start"></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -57,53 +66,37 @@ const RecentOrder = () => {
                   key={i}
                   className="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
                 >
-                  <td className="size-px whitespace-nowrap align-top">
-                    <Link className="block space-y-3 p-4" href="#">
-                      <div className="flex items-center gap-x-4">
-                        <Image
-                          className="size-[38px] flex-shrink-0 rounded-lg"
-                          src="https://images.unsplash.com/photo-1572307480813-ceb0e59d8325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=320&q=80"
-                          alt="Image Description"
-                          width={150}
-                          height={150}
-                        />
-                        <div>
-                          <span className="block text-base text-neutral-700">
-                            Lorem ipsum dolor,
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
+                  <td className="size-px whitespace-nowrap align-middle">
+                    <div className="flex p-4">
+                      <input
+                        type="checkbox"
+                        className="text-primary shrink-0 cursor-pointer rounded border-gray-400 disabled:pointer-events-none disabled:opacity-50"
+                        id="hs-default-checkbox"
+                      />
+                    </div>
                   </td>
-                  <td className="size-px whitespace-nowrap align-top">
+                  <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
-                      <div className="flex items-center gap-x-3">
-                        <Image
-                          className="inline-block size-[38px] rounded-full"
-                          src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                          alt="Image Description"
-                          width={150}
-                          height={150}
-                        />
-                        <div className="grow">
-                          <span className="block text-base font-semibold text-neutral-700">
-                            Christina Bersh
-                          </span>
-                          <span className="block text-base text-gray-500">
-                            christina@site.com
-                          </span>
-                        </div>
-                      </div>
+                      <p className="text-primary text-base font-medium hover:underline">
+                        #wefg-12tg
+                      </p>
                     </Link>
                   </td>
-                  <td className="h-px w-28 min-w-28 whitespace-nowrap align-top">
+                  <td className="size-px whitespace-nowrap align-middle">
+                    <Link className="block p-4" href="#">
+                      <p className="text-base text-neutral-700">
+                        Mathew Gustaffson
+                      </p>
+                    </Link>
+                  </td>
+                  <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
                       <p className="text-base text-neutral-700">
                         10th Mar 2024
                       </p>
                     </Link>
                   </td>
-                  <td className="h-px w-28 min-w-28 whitespace-nowrap align-top">
+                  <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
                       <span className="inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1 text-base font-medium text-[#1EB564]">
                         <svg
@@ -120,7 +113,7 @@ const RecentOrder = () => {
                       </span>
                     </Link>
                   </td>
-                  <td className="h-px w-40 min-w-40 whitespace-nowrap align-top">
+                  <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
                       <span className="inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1 text-base font-medium text-[#1EB564]">
                         <svg
@@ -136,6 +129,51 @@ const RecentOrder = () => {
                         Success
                       </span>
                     </Link>
+                  </td>
+                  <td className="size-px whitespace-nowrap align-middle">
+                    <Link className="block p-4" href="#">
+                      <p className="text-base text-neutral-700">4</p>
+                    </Link>
+                  </td>
+                  <td className="size-px whitespace-nowrap align-middle">
+                    <div className="px-6 py-2">
+                      <div className="hs-dropdown relative inline-block [--placement:bottom-right]">
+                        <button
+                          id="hs-table-dropdown-6"
+                          type="button"
+                          className="hs-dropdown-toggle transition-alldisabled:pointer-events-none inline-flex items-center justify-center gap-2 rounded-sm border border-gray-200 p-1 align-middle text-sm text-gray-700 disabled:opacity-50"
+                        >
+                          <ThreeDotsIcon className="size-5" />
+                        </button>
+                        <div
+                          className="hs-dropdown-menu duration hs-dropdown-open:opacity-100 z-20 mt-2 hidden min-w-40 divide-y divide-gray-200 rounded-lg bg-white p-2 opacity-0 shadow-2xl transition-[opacity,margin] dark:divide-gray-700 dark:border dark:border-gray-700 dark:bg-gray-800"
+                          aria-labelledby="hs-table-dropdown-6"
+                        >
+                          <div className="py-2 first:pt-0 last:pb-0">
+                            <a
+                              className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              href="#"
+                            >
+                              Edit
+                            </a>
+                            <a
+                              className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              href="#"
+                            >
+                              Cancel
+                            </a>
+                          </div>
+                          <div className="py-2 first:pt-0 last:pb-0">
+                            <a
+                              className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                              href="#"
+                            >
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               ))}

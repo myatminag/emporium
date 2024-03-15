@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { NotiIcon } from '@ecommerce/ui';
 
 const Header = () => {
@@ -7,63 +9,15 @@ const Header = () => {
         className="mx-auto flex w-full max-w-7xl basis-full items-center justify-between px-4 lg:px-6"
         aria-label="Global"
       >
-        <div className="hidden sm:block">
-          <label htmlFor="icon" className="sr-only">
-            Search
-          </label>
-          <div className="relative">
-            <div className="pointer-events-none absolute inset-y-0 start-0 z-20 flex items-center ps-4">
-              <svg
-                className="size-4 flex-shrink-0 text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx={11} cy={11} r={8} />
-                <path d="m21 21-4.3-4.3" />
-              </svg>
-            </div>
-            <input
-              type="text"
-              id="icon"
-              name="icon"
-              className="w-92 block rounded-sm border bg-transparent px-4 py-2 pe-20 ps-11 text-sm text-gray-300 shadow-sm placeholder:text-gray-500 focus:z-10 focus:border-gray-900 focus:ring-gray-600 md:w-96"
-              placeholder="Search"
-            />
-            <div className="pointer-events-none absolute inset-y-0 end-0 z-20 flex items-center pe-4">
-              <span className="text-gray-500">Ctrl + /</span>
-            </div>
-          </div>
+        <div className="w-full">
+          <p className="text-heading font-medium text-neutral-700">
+            Welcome, Alex.
+          </p>
+          <p className="text-sm text-neutral-700">
+            Here&apos;s what&apos;s happening with your store.
+          </p>
         </div>
         <div className="ms-auto flex w-full items-center justify-end lg:order-3 lg:gap-x-3">
-          <div className="lg:hidden">
-            <button
-              type="button"
-              className="inline-flex h-[2.375rem] w-[2.375rem] items-center justify-center gap-x-2 rounded-full text-sm font-semibold text-white hover:bg-white/20 focus:outline-none focus:ring-1 focus:ring-gray-600 disabled:pointer-events-none disabled:opacity-50"
-            >
-              <svg
-                className="size-4 flex-shrink-0"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx={11} cy={11} r={8} />
-                <path d="m21 21-4.3-4.3" />
-              </svg>
-            </button>
-          </div>
           <div className="flex flex-row items-center justify-end gap-2">
             <button
               type="button"
@@ -80,10 +34,12 @@ const Header = () => {
                 type="button"
                 className="inline-flex h-[2.375rem] w-[2.375rem] items-center justify-center gap-x-2 rounded-full text-sm font-semibold text-white hover:bg-white/20 focus:outline-none focus:ring-1 focus:ring-gray-600 disabled:pointer-events-none disabled:opacity-50"
               >
-                <img
+                <Image
                   className="inline-block size-[38px] rounded-full"
                   src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
                   alt="Image Description"
+                  width={150}
+                  height={150}
                 />
               </button>
               <div
