@@ -1,9 +1,9 @@
-import BrandSortOption from './components/BrandSortOption';
-import BrandSearch from './components/BrandSearch';
-import BrandPopularOption from './components/BrandPopularOption';
-import BrandPagination from './components/BrandPagination';
-import CreateBrand from './components/CreateBrand';
-import BrandTableLists from './components/BrandTableLists';
+import BrandSortOptions from './components/brand-sort-options';
+import BrandSearch from './components/brand-search';
+import BrandPopularOptions from './components/brand-popular-options';
+import BrandPagination from './components/brand-pagination';
+import CreateBrand from './components/create-brand';
+import BrandTableLists from './components/brand-table-lists';
 
 const Brand = () => {
   return (
@@ -13,15 +13,15 @@ const Brand = () => {
         <div className="my-4 flex flex-col items-start  gap-1 pr-4 md:flex-row md:justify-between">
           <div className="flex items-center justify-center gap-2 md:gap-6">
             <CreateBrand />
-            <BrandPopularOption />
+            <BrandPopularOptions />
           </div>
-          <div className="mt-4 w-full md:w-64">
+          <div className=" xs:mt-4 w-full md:w-64">
             <BrandSearch />
           </div>
         </div>
         <div className="text-md my-2 flex items-center justify-between px-2">
           <h3 className="">Total of 5 brands</h3>
-          <BrandSortOption />
+          <BrandSortOptions />
         </div>
 
         {/*  brand lists*/}

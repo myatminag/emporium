@@ -9,7 +9,7 @@ import TextAreaInput from 'packages/ui/src/common/textarea';
 import 'react-advanced-cropper/dist/style.css';
 import { HSOverlay } from 'preline/preline';
 import Dialog from 'packages/ui/src/common/dialog';
-import CropperBox from './CropperBox';
+import CropperBox from './cropper-box';
 
 const BrandMutationForm = () => {
   const brandCoverUrlRef = useRef<HTMLInputElement | null>(null);
@@ -137,13 +137,13 @@ const BrandMutationForm = () => {
       >
         Create Brand
       </Button>
-      <Dialog
-        targetDialog={cropperDialogId}
-        dialogTitle={'Crop Image'}
-        onClose={closeCropperDialog}
-      >
-        <CropperBox currentFileUrl={currentFileUrl} />
-      </Dialog>
+      {/*<Dialog*/}
+      {/*  targetDialog={cropperDialogId}*/}
+      {/*  dialogTitle={'Crop Image'}*/}
+      {/*  onClose={closeCropperDialog}*/}
+      {/*>*/}
+      {/*  <CropperBox currentFileUrl={currentFileUrl} />*/}
+      {/*</Dialog>*/}
     </>
   );
 };
