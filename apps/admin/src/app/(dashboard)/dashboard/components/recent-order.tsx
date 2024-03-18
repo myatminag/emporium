@@ -113,7 +113,7 @@ const RecentOrder = () => {
                       </span>
                     </Link>
                   </td>
-                  <td className="size-px whitespace-nowrap align-middle">
+                  <td className="w-36 max-w-36 whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
                       <span className="inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1 text-base font-medium text-[#1EB564]">
                         <svg

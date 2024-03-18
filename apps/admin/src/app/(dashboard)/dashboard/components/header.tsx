@@ -4,7 +4,7 @@ import { NotiIcon } from '@ecommerce/ui';
 
 const Header = () => {
   return (
-    <header className="z-50 flex w-full flex-wrap border-b bg-white py-2.5 text-sm shadow-sm sm:flex-nowrap sm:justify-start lg:py-4">
+    <header className="sticky top-0 z-50 flex w-full flex-wrap border-b bg-white py-2.5 text-sm shadow-sm sm:flex-nowrap sm:justify-start lg:py-4">
       <nav
         className="mx-auto flex w-full max-w-7xl basis-full items-center justify-between px-4 lg:px-6"
         aria-label="Global"
