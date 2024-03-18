@@ -65,6 +65,7 @@ const layout = ({ children }: { children: ReactNode }) => {
         </div>
       </div>
       <Sidebar />
+
       <main className="min-h-screen w-full lg:ps-64">
         <Header />
         {children}

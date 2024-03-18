@@ -4,7 +4,7 @@ import RecentOrder from './components/recent-order';
 import BestSellingProducts from './components/best-selling-products';
 import TopSellingCategories from './components/top-selling-categories';
 
-const Dasboard = () => {
+const Dashboard = () => {
   return (
     <div className="space-y-4 px-4 py-8 lg:px-6">
       <Stats />
@@ -22,4 +22,4 @@ const Dasboard = () => {
   );
 };
 
-export default Dasboard;
+export default Dashboard;
