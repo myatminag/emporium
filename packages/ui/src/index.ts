@@ -1,6 +1,8 @@
 export * from './common/button';
 export * from './common/input';
 export * from './common/carousel';
+export * from './common/textarea';
+export * from './common/dialog';
 
 // icons
 export * from './icons/logo-icon';
@@ -25,5 +27,13 @@ export * from './icons/auth-icon';
 export * from './icons/banner-icon';
 export * from './icons/brand-icon';
 export * from './icons/point-icon';
+export * from './icons/star-icon';
+export * from './icons/circle-icon';
+export * from './icons/sort-icon';
+export * from './icons/pencil-icon';
+export * from './icons/transh-icon';
+export * from './icons/edit-icon';
+export * from './icons/upload-image-icon';
+export * from './icons/camera-icon';
 export * from './icons/noti-icon';
 export * from './icons/stats-icon';
