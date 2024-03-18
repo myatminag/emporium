@@ -39,3 +39,5 @@ export * from './icons/noti-icon';
 export * from './icons/stats-icon';
 export * from './icons/three-dots-icon';
 export * from './icons/filter-icon';
+export * from './icons/popular-icon';
+export * from './icons/status-icon';

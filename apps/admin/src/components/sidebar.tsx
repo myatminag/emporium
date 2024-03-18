@@ -74,20 +74,20 @@ const Sidebar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
+                    href="/product-list"
                   >
                     Product Lists
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
+                    href="/inventory"
                   >
                     Inventory
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -139,16 +139,17 @@ const Sidebar = () => {
           </li>
 
           <li>
-            <div
+            <Link
               className={cn(
                 'flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100',
               )}
+              href="/brand"
             >
               <BrandIcon
                 className={cn('size-5 flex-shrink-0 text-neutral-700')}
               />
               Brands
-            </div>
+            </Link>
           </li>
 
           <li>
