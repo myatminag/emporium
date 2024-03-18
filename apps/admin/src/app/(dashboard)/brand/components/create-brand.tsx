@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { CircleIcon } from '@ecommerce/ui';
-import BrandMutationForm from './BrandMutationForm';
+import BrandMutationForm from './brand-mutation-form';
 import Dialog from 'packages/ui/src/common/dialog';
 import { HSOverlay } from 'preline/preline';
 
@@ -13,7 +13,6 @@ const CreateBrand = () => {
   };
   return (
     <>
-      <button id="#button">close</button>
       <div className="text-center">
         <button
           data-hs-overlay={`#${dialogId}`}
@@ -24,11 +23,7 @@ const CreateBrand = () => {
           <span className="mt-.5 md:text-md text-sm font-medium">Create</span>
         </button>
       </div>
-      <Dialog
-        dialogTitle="Create Brand"
-        targetDialog={dialogId}
-        onClose={handleColeDialog}
-      >
+      <Dialog dialogTitle="Create Brand" targetDialog={dialogId}>
         <BrandMutationForm />
       </Dialog>
     </>

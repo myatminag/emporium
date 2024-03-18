@@ -17,6 +17,7 @@
     "next": "14.0.4",
     "pg": "^8.11.3",
     "preline": "^2.0.3",
+    "query-string": "^9.0.0",
     "react": "18.2.0",
     "react-advanced-cropper": "^0.19.6",
     "react-apexcharts": "^1.4.1",

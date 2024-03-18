@@ -37,3 +37,4 @@ export * from './icons/upload-image-icon';
 export * from './icons/camera-icon';
 export * from './icons/noti-icon';
 export * from './icons/stats-icon';
+export * from './icons/reorder-icon';

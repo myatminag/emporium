@@ -4,5 +4,4 @@ export type DialogProps = {
   targetDialog: string;
   children: ReactNode;
   dialogTitle: string;
-  onClose: () => void;
 };
