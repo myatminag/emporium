@@ -47,6 +47,7 @@ const Sidebar = () => {
               Dashboard
             </Link>
           </li>
+
           <li className="hs-accordion" id="account-accordion">
             <button
               type="button"
