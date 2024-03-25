@@ -81,14 +81,6 @@ const Sidebar = () => {
                     Product Lists
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="/inventory"
-                  >
-                    Inventory
-                  </Link>
-                </li>
               </ul>
             </div>
           </li>
@@ -189,22 +181,6 @@ const Sidebar = () => {
                   >
                     Order List
                   </Link>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 3
-                  </a>
                 </li>
               </ul>
             </div>

@@ -62,9 +62,7 @@ const NewProduct = () => {
                 </svg>
                 <span className="mt-2 block text-base text-neutral-700">
                   Browse your device or{' '}
-                  <span className="text-blue-600 group-hover:text-blue-700">
-                    drag&apos;n drop&apos;
-                  </span>
+                  <span className="text-primary">drag&apos;n drop&apos;</span>
                 </span>
                 <span className="mt-1 block text-sm text-gray-400">
                   Maximum file size is 2 MB
@@ -332,8 +330,8 @@ const NewProduct = () => {
                   <input
                     type="checkbox"
                     id="hs-small-switch"
-                    className="relative h-6 w-11 cursor-pointer rounded-full border-transparent bg-gray-100 p-px text-transparent transition-colors duration-200 ease-in-out before:inline-block before:size-5 before:translate-x-0 before:transform before:rounded-full before:bg-white before:shadow before:ring-0 before:transition before:duration-200 before:ease-in-out checked:border-blue-600
-  checked:bg-none checked:text-blue-600 checked:before:translate-x-full checked:before:bg-blue-200 focus:ring-blue-600 focus:checked:border-blue-600 disabled:pointer-events-none disabled:opacity-50"
+                    className="focus:ring-primary focus:checked:border-primary checked:border-primary checked:text-primary relative h-6 w-11 cursor-pointer rounded-full border-transparent bg-gray-100 p-px text-transparent transition-colors duration-200 ease-in-out before:inline-block before:size-5 before:translate-x-0 before:transform before:rounded-full before:bg-white before:shadow before:ring-0
+  before:transition before:duration-200 before:ease-in-out checked:bg-none checked:before:translate-x-full checked:before:bg-red-200 disabled:pointer-events-none disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -409,7 +407,7 @@ const NewProduct = () => {
             <div className="space-x-4 p-4">
               <button
                 type="button"
-                className="inline-flex items-center gap-x-2 rounded-sm border border-transparent bg-blue-600 px-4 py-2 text-base text-white hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
+                className="bg-primary inline-flex items-center gap-x-2 rounded-sm border border-transparent px-4 py-2 text-base text-white disabled:pointer-events-none disabled:opacity-50"
                 data-hs-overlay="#product-options"
               >
                 <CircleIcon className="size-4" />
@@ -461,7 +459,7 @@ const NewProduct = () => {
                       Cancel
                     </button>
                     <a
-                      className="inline-flex items-center gap-x-2 rounded-sm border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
+                      className="bg-primary inline-flex items-center gap-x-2 rounded-sm border border-transparent px-4 py-2 text-base font-medium text-white disabled:pointer-events-none disabled:opacity-50"
                       href="#"
                     >
                       Add
@@ -471,7 +469,7 @@ const NewProduct = () => {
               </Dialog>
               <button
                 type="button"
-                className="inline-flex items-center gap-x-2 rounded-sm border border-transparent bg-blue-600 px-4 py-2 text-base text-white hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
+                className="bg-primary inline-flex items-center gap-x-2 rounded-sm border border-transparent px-4 py-2 text-base text-white disabled:pointer-events-none disabled:opacity-50"
                 data-hs-overlay="#manage-variants"
               >
                 <CircleIcon className="size-4" />
@@ -675,7 +673,7 @@ const NewProduct = () => {
                       </button>
                       <button
                         type="button"
-                        className="inline-flex items-center gap-x-2 rounded-sm border border-transparent bg-blue-600 px-3 py-2 text-base font-medium text-white hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
+                        className="bg-primary inline-flex items-center gap-x-2 rounded-sm border border-transparent px-3 py-2 text-base font-medium text-white disabled:pointer-events-none disabled:opacity-50"
                       >
                         Apply
                       </button>
@@ -699,7 +697,7 @@ const NewProduct = () => {
         </button>
         <button
           type="button"
-          className="inline-flex items-center gap-x-2 rounded-sm border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
+          className="bg-primary inline-flex items-center gap-x-2 rounded-sm border border-transparent px-4 py-2 text-base font-medium text-white disabled:pointer-events-none disabled:opacity-50"
         >
           Save
         </button>

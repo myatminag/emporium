@@ -195,46 +195,46 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
+                    <Link className="block p-4" href="/order-detail/wefg-12tg">
                       <p className="text-primary text-base font-medium hover:underline">
                         #wefg-12tg
                       </p>
                     </Link>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
+                    <div className="block p-4">
                       <p className="text-base text-neutral-700">
                         Mathew Gustaffson
                       </p>
-                    </Link>
+                    </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
+                    <div className="block p-4">
                       <p className="text-base text-neutral-700">
                         10th Mar 2024
                       </p>
-                    </Link>
+                    </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
+                    <div className="block p-4">
                       <span className="inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1 text-base font-medium text-[#1EB564]">
                         <SuccessIcon className="size-4" />
                         Confirmed
                       </span>
-                    </Link>
+                    </div>
                   </td>
                   <td className="w-36 max-w-36 whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
+                    <div className="block p-4">
                       <span className="inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1 text-base font-medium text-[#1EB564]">
                         <SuccessIcon className="size-4" />
                         Success
                       </span>
-                    </Link>
+                    </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
+                    <div className="block p-4">
                       <p className="text-base text-neutral-700">4</p>
-                    </Link>
+                    </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
                     <div className="px-6 py-2">
@@ -251,12 +251,6 @@ const OrderList = () => {
                           aria-labelledby="hs-table-dropdown-6"
                         >
                           <div className="py-2 first:pt-0 last:pb-0">
-                            <a
-                              className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                              href="#"
-                            >
-                              Edit
-                            </a>
                             <a
                               className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                               href="#"
