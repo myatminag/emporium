@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { brands } from '../../../../data/dummy';
-import BrandDescription from './BrandDescription';
+import BrandDescription from './brand-description';
 import { EditIcon, StarIcon, TranshIcon } from '@ecommerce/ui';
 import { cn } from '@ecommerce/lib';
-import BrandAction from './BrandAction';
+import BrandAction from './brand-action';
 
 const BrandTableLists = () => {
   return (
@@ -23,9 +23,9 @@ const BrandTableLists = () => {
           </tr>
         </thead>
         <tbody className="min-h-screen pb-12">
-          {brands.map((item) => (
+          {brands.map((item, index) => (
             <tr
-              key={item.title}
+              key={index}
               className="border-b bg-white dark:border-gray-700 dark:bg-gray-800"
             >
               <th

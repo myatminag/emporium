@@ -41,3 +41,4 @@ export * from './icons/filter-icon';
 export * from './icons/popular-icon';
 export * from './icons/status-icon';
 export * from './icons/location-icon';
+export * from './icons/reorder-icon';

@@ -8,17 +8,21 @@ import { useForm } from 'react-hook-form';
 import TextAreaInput from 'packages/ui/src/common/textarea';
 import 'react-advanced-cropper/dist/style.css';
 import { HSOverlay } from 'preline/preline';
-import CropperBox from './CropperBox';
+import CropperBox from './cropper-box';
 
 const BrandMutationForm = () => {
   const brandCoverUrlRef = useRef<HTMLInputElement | null>(null);
   const [currentFileUrl, setCurrentFileUrl] = useState<string>('');
   let coverUrl;
-  const brandLogo = '/dummy/apple.png';
+  let brandLogo = '/dummy/apple.png';
   const cropperDialogId = 'cropper-dialog-Id';
   const cropperElementById = document.getElementById(
     cropperDialogId,
   ) as HTMLElement;
+
+  const closeCropperDialog = () => {
+    HSOverlay.open(cropperElementById);
+  };
 
   const {
     control,

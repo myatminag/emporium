@@ -1,14 +1,13 @@
 'use client';
 import React from 'react';
 import { CircleIcon, Dialog } from '@ecommerce/ui';
-import BrandMutationForm from './BrandMutationForm';
+import BrandMutationForm from './brand-mutation-form';
 
 const CreateBrand = () => {
   const dialogId = 'create-brand-dialog';
 
   return (
     <>
-      <button id="#button">close</button>
       <div className="text-center">
         <button
           data-hs-overlay={`#${dialogId}`}

@@ -9,7 +9,7 @@ const sortLists = [
   { id: 5, title: 'Product Count High to Low' },
   { id: 6, title: 'Product Count Low to High' },
 ];
-const BrandSortOption = () => {
+const BrandSortOptions = () => {
   return (
     <h3 className="hover:bg-secondary-400 inline-flex cursor-pointer items-center gap-2 rounded-lg p-2 transition-colors duration-300">
       Newest First
@@ -18,4 +18,4 @@ const BrandSortOption = () => {
   );
 };
 
-export default BrandSortOption;
+export default BrandSortOptions;
