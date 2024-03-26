@@ -1,4 +1,4 @@
-import { Control, Controller, UseFormRegister } from 'react-hook-form';
+import { Control, Controller } from 'react-hook-form';
 
 type InputProps = {
   label: string;

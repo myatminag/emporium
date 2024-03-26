@@ -26,20 +26,28 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: '#EB001B',
-          100: '#EAF0FF',
+          DEFAULT: '#CF202D',
         },
-        secondary: {
-          DEFAULT: '#111827',
-          100: '#EFF2F4',
+        neutral: {
+          DEFAULT: '#F9FAFB',
+          100: '#F3F4F6',
           200: '#E5E7EB',
           300: '#D3D5DA',
-          400: '#F4F4F4',
-          500: '#FCC100',
+          400: '#9CA3AF',
+          500: '#6D7280',
           600: '#4B5563',
           700: '#374151',
           800: '#1F2937',
           900: '#111827',
+        },
+        success: {
+          DEFAULT: '#1EB564',
+        },
+        warning: {
+          DEFAULT: '',
+        },
+        danger: {
+          DEFAULT: '',
         },
       },
       fontSize: {
@@ -73,5 +81,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('preline/plugin')],
+  plugins: [require('preline/plugin'), require('@tailwindcss/forms')],
 };

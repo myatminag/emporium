@@ -1,10 +1,18 @@
 'use client';
 
-import { ReactNode } from 'react';
-import { NextUIProvider } from '@nextui-org/react';
+import { ReactNode, useRef } from 'react';
+import { Provider } from 'react-redux';
+import { appStore, AppStore } from '../store/store';
 
-const Provider = ({ children }: { children: ReactNode }) => {
-  return <NextUIProvider>{children}</NextUIProvider>;
+const AppProvider = ({ children }: { children: ReactNode }) => {
+  const storeRef = useRef<AppStore>();
+
+  if (!storeRef.current) {
+    // Create the store instance the first time this renders
+    storeRef.current = appStore();
+  }
+
+  return <Provider store={storeRef.current}>{children}</Provider>;
 };
 
-export default Provider;
+export default AppProvider;

@@ -45,7 +45,7 @@ const BestSellingProducts = () => {
                   key={i}
                   className="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
                 >
-                  <td className="size-px whitespace-nowrap align-top">
+                  <td className="size-px whitespace-nowrap align-middle">
                     <a className="block space-y-3 p-4" href="#">
                       <div className="flex items-center gap-x-4">
                         <Image
@@ -63,12 +63,12 @@ const BestSellingProducts = () => {
                       </div>
                     </a>
                   </td>
-                  <td className="h-px w-28 min-w-28 whitespace-nowrap align-top">
+                  <td className="h-px w-28 min-w-28 whitespace-nowrap align-middle">
                     <a className="block p-4" href="#">
                       <p className="text-base text-neutral-700">563 orders</p>
                     </a>
                   </td>
-                  <td className="h-px w-28 min-w-28 whitespace-nowrap align-top">
+                  <td className="h-px w-28 min-w-28 whitespace-nowrap align-middle">
                     <a className="block p-4" href="#">
                       <div className="inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1">
                         <div className="inline-flex items-center">
@@ -80,7 +80,7 @@ const BestSellingProducts = () => {
                       </div>
                     </a>
                   </td>
-                  <td className="size-px whitespace-nowrap align-top">
+                  <td className="size-px whitespace-nowrap align-middle">
                     <a
                       className="block p-4 text-base text-neutral-700"
                       href="#"

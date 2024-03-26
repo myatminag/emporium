@@ -1,7 +1,7 @@
 import { Roboto } from 'next/font/google';
 
 import './global.css';
-import Provider from './provider';
+import AppProvider from './provider';
 import { PrelineScript } from '@ecommerce/lib';
 
 const roboto = Roboto({
@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Provider>
+        <AppProvider>
           <main className="bg-[#f8fafc]">{children}</main>
-        </Provider>
+        </AppProvider>
       </body>
       <PrelineScript />
     </html>
