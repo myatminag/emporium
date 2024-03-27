@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { MainLogo } from 'packages/ui/src';
+import SignInIcon from '../../components/icons/login-icon';
 import LoginForm from '../../components/auth/login-form';
 
 export const metadata: Metadata = {
@@ -9,17 +9,18 @@ export const metadata: Metadata = {
 
 const LoginPage = () => {
   return (
-    <main className="flex min-h-screen flex-col justify-center px-4 py-12 lg:px-8">
-      <div className="space-y-5 rounded-xl border border-gray-200 bg-white p-4 shadow-sm lg:mx-auto lg:w-full lg:max-w-md lg:p-8">
-        <div className="space-y-5 lg:mx-auto lg:w-full lg:max-w-sm">
-          <MainLogo className="mx-auto size-10" />
-          <h2 className="text-center text-2xl font-semibold leading-9 tracking-tight text-neutral-700">
-            Sign in to your account
-          </h2>
-        </div>
-        <div className="mt-10 lg:mx-auto lg:w-full lg:max-w-sm">
-          <LoginForm />
-        </div>
+    <main className="min-h-screen lg:grid lg:grid-cols-2">
+      <div className="bg-primary flex flex-col items-center justify-center px-4 py-8">
+        <p className="text-heading text-center font-medium text-white lg:text-lg">
+          Let&apos;s make your <br /> online business thrive together!
+        </p>
+        <SignInIcon className="size-56 lg:size-96" />
+      </div>
+      <div className="flex min-h-[calc(100vh-342px)] flex-col items-center justify-center space-y-5 p-4 lg:mx-auto lg:w-full lg:max-w-md lg:rounded-xl">
+        <h2 className="text-center text-xl font-semibold leading-9 tracking-tight text-neutral-700">
+          Sign in to your account
+        </h2>
+        <LoginForm />
       </div>
     </main>
   );

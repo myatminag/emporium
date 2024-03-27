@@ -32,7 +32,10 @@ const PasswordForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleResetPassword)} className="space-y-6">
+    <form
+      onSubmit={handleSubmit(handleResetPassword)}
+      className="w-full space-y-6"
+    >
       <div className="space-y-2">
         <label
           htmlFor="password"
@@ -97,7 +100,7 @@ const PasswordForm = () => {
         size="sm"
         className="w-full text-base"
       >
-        Recover Password
+        Reset Password
       </Button>
     </form>
   );
