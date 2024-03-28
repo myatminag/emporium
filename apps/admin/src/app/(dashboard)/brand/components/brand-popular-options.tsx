@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import { Button, StarIcon, ReorderIcon } from '@ecommerce/ui';
+import { Button, StarIcon, ReorderIcon, Dialog } from '@ecommerce/ui';
 import { HSOverlay } from 'preline/preline';
-import Dialog from 'packages/ui/src/common/dialog';
+
 import { brands } from '../../../../data/dummy';
 import Image from 'next/image';
-import { Reorder, useMotionValue } from 'framer-motion';
+import { Reorder } from 'framer-motion';
 
 const BrandPopularOptions = () => {
   const [listItem, setListItem] = useState(brands);

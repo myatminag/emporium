@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { CircleIcon } from '@ecommerce/ui';
+import { CircleIcon, Dialog } from '@ecommerce/ui';
 import BrandMutationForm from './brand-mutation-form';
-import Dialog from 'packages/ui/src/common/dialog';
+
 import { HSOverlay } from 'preline/preline';
 
 const CreateBrand = () => {

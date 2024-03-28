@@ -1,7 +1,11 @@
 import React from 'react';
 import { DialogProps } from '../../types/ui';
 
-const Dialog = ({ children, targetDialog, dialogTitle }: DialogProps) => {
+export const Dialog = ({
+  children,
+  targetDialog,
+  dialogTitle,
+}: DialogProps) => {
   return (
     <div
       id={targetDialog}
@@ -46,5 +50,3 @@ const Dialog = ({ children, targetDialog, dialogTitle }: DialogProps) => {
     </div>
   );
 };
-
-export default Dialog;
