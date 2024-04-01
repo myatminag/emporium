@@ -7,10 +7,9 @@
     "type-check": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p tsconfig.json --noEmit"],
+        "commands": ["tsc -p tsconfig.json"],
         "cwd": "apps/admin",
-        "forwardAllArgs": false,
-        "noEmit": true
+        "forwardAllArgs": false
       }
     },
     "build": {
