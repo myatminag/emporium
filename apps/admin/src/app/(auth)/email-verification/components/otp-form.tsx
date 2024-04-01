@@ -4,7 +4,7 @@ import { Button } from '@ecommerce/ui';
 
 const OtpForm = () => {
   return (
-    <form className="space-y-6">
+    <form className="w-full space-y-6">
       <div className="flex justify-center space-x-3" data-hs-pin-input="">
         <input
           type="text"

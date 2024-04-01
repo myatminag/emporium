@@ -26,7 +26,10 @@ const ForgotPasswordForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleForgotPassword)} className="space-y-6">
+    <form
+      onSubmit={handleSubmit(handleForgotPassword)}
+      className="w-full space-y-6"
+    >
       <div className="space-y-2">
         <label
           htmlFor="email"
@@ -49,7 +52,7 @@ const ForgotPasswordForm = () => {
         type="submit"
         variant="primary"
         size="sm"
-        className="w-full text-base"
+        className="w-full rounded-sm text-base"
       >
         Recover Password
       </Button>

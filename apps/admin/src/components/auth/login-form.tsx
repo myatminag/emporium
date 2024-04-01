@@ -35,7 +35,7 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleLogin)} className="space-y-6">
+    <form onSubmit={handleSubmit(handleLogin)} className="w-full space-y-6">
       <div className="space-y-2">
         <label
           htmlFor="email"
@@ -95,7 +95,7 @@ const LoginForm = () => {
         type="submit"
         variant="primary"
         size="sm"
-        className="w-full text-base"
+        className="w-full rounded-sm text-base"
       >
         Sign In
       </Button>
