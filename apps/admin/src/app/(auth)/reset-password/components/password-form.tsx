@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 import { Button, TogglePasswordIcon } from '@ecommerce/ui';
 
-const resetPasswordValidation = z
+const resetPasswordSchema = z
   .object({
     password: z.string().min(8, 'Password must be at least 8 characters'),
     cpassword: z.string().min(8, 'Password must be at least 8 characters'),
@@ -16,7 +16,7 @@ const resetPasswordValidation = z
     path: ['cpassword'],
   });
 
-type ResetPasswordSchemaType = z.infer<typeof resetPasswordValidation>;
+type ResetPasswordSchemaType = z.infer<typeof resetPasswordSchema>;
 
 const PasswordForm = () => {
   const {
@@ -24,7 +24,7 @@ const PasswordForm = () => {
     handleSubmit,
     register,
   } = useForm<ResetPasswordSchemaType>({
-    resolver: zodResolver(resetPasswordValidation),
+    resolver: zodResolver(resetPasswordSchema),
   });
 
   const handleResetPassword = (data: ResetPasswordSchemaType) => {
