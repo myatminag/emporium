@@ -12,24 +12,22 @@ const Brand = () => {
         <h1 className="text-xl font-semibold">Brands</h1>
         <div className="my-4 flex flex-col items-start  gap-1 pr-4 md:flex-row md:justify-between">
           <div className="flex items-center justify-center gap-2 md:gap-6">
-            <CreateBrand />
-            <BrandPopularOptions />
+            {/* <CreateBrand /> */}
+            {/* <BrandPopularOptions /> */}
           </div>
-          <div className=" xs:mt-4 w-full md:w-64">
-            <BrandSearch />
-          </div>
+          <div className=" xs:mt-4 w-full md:w-64">{/* <BrandSearch /> */}</div>
         </div>
         <div className="text-md my-2 flex items-center justify-between px-2">
           <h3 className="">Total of 5 brands</h3>
-          <BrandSortOptions />
+          {/* <BrandSortOptions /> */}
         </div>
 
         {/*  brand lists*/}
-        <BrandTableLists />
+        {/* <BrandTableLists /> */}
 
         {/*  page lists*/}
         <div className="fixed bottom-0 mt-auto w-full bg-white py-4">
-          <BrandPagination />
+          {/* <BrandPagination /> */}
         </div>
       </div>
     </div>
