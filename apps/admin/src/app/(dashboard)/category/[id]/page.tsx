@@ -7,7 +7,7 @@ import {
   Button,
   CameraPlus,
   CircleIcon,
-  Dialog,
+  CustomDialog,
   EditRoundIcon,
 } from '@ecommerce/ui';
 
@@ -23,7 +23,7 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
   const dialogId = 'select-brand-lists-id';
 
   const [selectedBrandLists, setSelectedBrandLists] = useState<string[]>([]);
-  const [selectedSubCategory, setSelectedSubCategory] = useState<string[]>([]);
+  const [openDial, setOpenDial] = useState(false);
 
   const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
     setSelectedBrandLists((prev) => [...prev, e.target.value]);
@@ -142,7 +142,10 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
               >
                 {`Sub Category(${selectedBrandLists.length})`}
               </label>
-              <Button className="bg-primary-100 my-3 max-w-[230px] gap-2 px-3 text-blue-500 ">
+              <Button
+                onClick={() => setOpenDial(true)}
+                className="bg-primary-100 my-3 max-w-[230px] gap-2 px-3 text-blue-500 "
+              >
                 <CircleIcon className="h-5 w-5" />
                 Add New Sub Category
               </Button>
@@ -151,8 +154,12 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
         </div>
       </PageWrapper>
 
-      <Dialog dialogTitle={'Select Associate Brand(s)'} targetDialog={dialogId}>
-        <div className="relative h-[500px] overflow-y-scroll">
+      <CustomDialog
+        dialogTitle="Hello"
+        open={openDial}
+        onClose={() => setOpenDial(false)}
+      >
+        <div className="relative h-[300px] w-[600px] overflow-y-scroll">
           <ul className="space-y-4">
             {brands.map((brand) => (
               <li
@@ -175,7 +182,7 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
               </li>
             ))}
           </ul>
-          <div className="center sticky bottom-0 w-full gap-2 bg-white py-2">
+          <div className="center sticky bottom-0 z-20 w-full gap-2 bg-white py-1">
             <Button
               className="w-40 bg-blue-500 px-3 py-1 text-white"
               data-hs-overlay={`#${dialogId}`}
@@ -185,7 +192,7 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
             <Button className="w-40 px-3 py-1">Cancel</Button>
           </div>
         </div>
-      </Dialog>
+      </CustomDialog>
     </>
   );
 };
