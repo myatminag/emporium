@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 3px;
+  height: 5px;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #BEBEBE;
+  opacity: 80%;
+  border-radius: 8px;
+}

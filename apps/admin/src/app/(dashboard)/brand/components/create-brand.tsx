@@ -3,9 +3,14 @@ import React from 'react';
 import { CircleIcon, Dialog } from '@ecommerce/ui';
 import BrandMutationForm from './brand-mutation-form';
 
+import { HSOverlay } from 'preline/preline';
+
 const CreateBrand = () => {
   const dialogId = 'create-brand-dialog';
-
+  const dialogElementById = document.getElementById(dialogId) as HTMLElement;
+  const handleColeDialog = () => {
+    HSOverlay.close(dialogElementById);
+  };
   return (
     <>
       <div className="text-center">

@@ -1,20 +1,19 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { UploadImageIcon, CameraIcon, Button, Dialog } from '@ecommerce/ui';
+import { UploadImageIcon, CameraIcon, Button } from '@ecommerce/ui';
 
 import TextInput from 'packages/ui/src/common/input';
 import { useForm } from 'react-hook-form';
 import TextAreaInput from 'packages/ui/src/common/textarea';
 import 'react-advanced-cropper/dist/style.css';
 import { HSOverlay } from 'preline/preline';
-import CropperBox from './cropper-box';
 
 const BrandMutationForm = () => {
   const brandCoverUrlRef = useRef<HTMLInputElement | null>(null);
   const [currentFileUrl, setCurrentFileUrl] = useState<string>('');
   let coverUrl;
-  let brandLogo = '/dummy/apple.png';
+  let brandLogo;
   const cropperDialogId = 'cropper-dialog-Id';
   const cropperElementById = document.getElementById(
     cropperDialogId,
@@ -136,9 +135,13 @@ const BrandMutationForm = () => {
       >
         Create Brand
       </Button>
-      <Dialog targetDialog={cropperDialogId} dialogTitle={'Crop Image'}>
-        <CropperBox currentFileUrl={currentFileUrl} />
-      </Dialog>
+      {/*<Dialog*/}
+      {/*  targetDialog={cropperDialogId}*/}
+      {/*  dialogTitle={'Crop Image'}*/}
+      {/*  onClose={closeCropperDialog}*/}
+      {/*>*/}
+      {/*  <CropperBox currentFileUrl={currentFileUrl} />*/}
+      {/*</Dialog>*/}
     </>
   );
 };

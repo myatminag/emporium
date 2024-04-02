@@ -2,7 +2,7 @@ import { Roboto } from 'next/font/google';
 
 import './global.css';
 import AppProvider from './provider';
-import { PrelineScript } from '@ecommerce/lib';
+import { cn, PrelineScript } from '@ecommerce/lib';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],

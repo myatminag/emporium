@@ -3,6 +3,8 @@ export * from './common/input';
 export * from './common/carousel';
 export * from './common/textarea';
 export * from './common/dialog';
+export * from './common/input-search';
+export * from './common/custom-dialog';
 
 // icons
 export * from './icons/logo-icon';
@@ -42,3 +44,10 @@ export * from './icons/popular-icon';
 export * from './icons/status-icon';
 export * from './icons/location-icon';
 export * from './icons/reorder-icon';
+export * from './icons/plus-square-icon';
+export * from './icons/drag-icon';
+export * from './icons/plus-square-icon';
+export * from './icons/edit-round-icon';
+export * from './icons/left-arrow-icon';
+export * from './icons/camera-plus';
+export * from './icons/close-icon';

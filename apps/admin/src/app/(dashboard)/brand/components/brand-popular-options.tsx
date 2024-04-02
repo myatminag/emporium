@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import { Button, StarIcon, ReorderIcon, Dialog } from '@ecommerce/ui';
 import { HSOverlay } from 'preline/preline';
+
 import { brands } from '../../../../data/dummy';
 import Image from 'next/image';
-import { Reorder, useMotionValue } from 'framer-motion';
+import { Reorder } from 'framer-motion';
 
 const BrandPopularOptions = () => {
   const [listItem, setListItem] = useState(brands);
