@@ -18,7 +18,7 @@
       "defaultConfiguration": "production",
       "options": {
         "postcssConfig": "apps/admin/postcss.config.js",
-        "outputPath": "dist/build"
+        "outputPath": "dist/apps/admin"
       }
     }
   },
