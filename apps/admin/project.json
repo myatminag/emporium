@@ -7,15 +7,18 @@
     "type-check": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tsc -p tsconfig.json --noEmit"],
+        "commands": ["tsc -p tsconfig.json"],
         "cwd": "apps/admin",
         "forwardAllArgs": false
       }
     },
     "build": {
-      "executor": "@nx/web:webpack",
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "postcssConfig": "apps/admin/postcss.config.js"
+        "postcssConfig": "apps/admin/postcss.config.js",
+        "outputPath": "dist/apps/admin"
       }
     }
   },

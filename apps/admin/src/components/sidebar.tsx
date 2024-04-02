@@ -24,7 +24,7 @@ const Sidebar = () => {
   return (
     <aside
       id="application-sidebar"
-      className="hs-overlay hs-overlay-open:translate-x-0 fixed bottom-0 start-0 top-0 z-[60] hidden w-64 -translate-x-full transform overflow-y-auto border-e border-gray-200 bg-white pb-10 pt-7 transition-all duration-300 lg:bottom-0 lg:end-auto lg:block lg:translate-x-0 dark:border-gray-700 dark:bg-gray-800 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-slate-700 [&::-webkit-scrollbar]:w-2"
+      className="hs-overlay hs-overlay-open:translate-x-0 fixed bottom-0 start-0 top-0 z-[60] hidden w-64 -translate-x-full transform overflow-y-auto border-e border-gray-200 bg-white pb-10 pt-7 transition-all duration-300 lg:bottom-0 lg:end-auto lg:block lg:translate-x-0 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-slate-700 [&::-webkit-scrollbar]:w-2"
     >
       <p className="flex-none px-9 text-xl font-semibold">Emporium</p>
       <nav className="hs-accordion-group flex w-full flex-col flex-wrap p-6">
@@ -66,28 +66,20 @@ const Sidebar = () => {
             >
               <ul className="ps-2 pt-2">
                 <li>
-                  <a
+                  <Link
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
+                    href="/new-product"
+                  >
+                    New Product
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    href="/product-list"
                   >
                     Product Lists
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Inventory
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 3
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -113,9 +105,9 @@ const Sidebar = () => {
                 <li>
                   <a
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="/category"
+                    href="#"
                   >
-                    category list
+                    Link 1
                   </a>
                 </li>
                 <li>
@@ -183,28 +175,12 @@ const Sidebar = () => {
             >
               <ul className="ps-2 pt-2">
                 <li>
-                  <a
+                  <Link
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
+                    href="/order-list"
                   >
-                    category
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 3
-                  </a>
+                    Order List
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -219,7 +195,7 @@ const Sidebar = () => {
               <LoyaltyIcon
                 className={cn('size-5 flex-shrink-0 text-neutral-700')}
               />
-              Loyalty Point
+              Member Point
             </div>
           </li>
 
