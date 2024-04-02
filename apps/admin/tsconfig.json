@@ -30,7 +30,8 @@
     "../../dist/apps/admin/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "../../dist/acme/.next/types/**/*.ts"
+    "../../dist/acme/.next/types/**/*.ts",
+    "../../dist/build/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
