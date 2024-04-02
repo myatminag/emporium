@@ -14,11 +14,9 @@
     },
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "postcssConfig": "apps/admin/postcss.config.js",
-        "outputPath": "dist/acme"
+        "postcssConfig": "apps/admin/postcss.config.js"
       }
     }
   },
