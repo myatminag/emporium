@@ -35,5 +35,7 @@ module.exports = {
     'type-case': [2, 'always', ['lowerCase']],
     'subject-case': [2, 'always', ['lower-case', 'kebab-case']],
     'subject-empty': [2, 'never'],
+    'scope-case': [2, 'always', ['lower-case', 'kebab-case']],
+    'scope-empty': [2, 'never'],
   },
 };
