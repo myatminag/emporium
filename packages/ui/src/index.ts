@@ -51,3 +51,4 @@ export * from './icons/edit-round-icon';
 export * from './icons/left-arrow-icon';
 export * from './icons/camera-plus';
 export * from './icons/close-icon';
+export * from './icons/upload-icon';
