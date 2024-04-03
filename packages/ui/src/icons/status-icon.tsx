@@ -14,3 +14,11 @@ export const SuccessIcon = (props: SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
+
+export const PendingIcon = (props: SVGProps<SVGSVGElement>) => {
+  return;
+};
+
+export const FailIcon = (props: SVGProps<SVGSVGElement>) => {
+  return;
+};

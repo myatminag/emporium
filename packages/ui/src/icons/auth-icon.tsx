@@ -21,34 +21,6 @@ export const LogoutIcon = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export const PermissionIcon = (props: SVGProps<SVGSVGElement>) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      fill="none"
-      viewBox="0 0 24 24"
-      {...props}
-    >
-      <path
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        d="M12 15a1.875 1.875 0 100-3.75A1.875 1.875 0 0012 15zM12 15v2.25"
-      ></path>
-      <path
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        d="M19.5 8.25h-15a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h15a.75.75 0 00.75-.75V9a.75.75 0 00-.75-.75zM8.625 8.25V4.875a3.375 3.375 0 016.75 0V8.25"
-      ></path>
-    </svg>
-  );
-};
-
 export const TogglePasswordIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
@@ -91,6 +63,23 @@ export const TogglePasswordIcon = (props: SVGProps<SVGSVGElement>) => {
         cy={12}
         r={3}
       />
+    </svg>
+  );
+};
+
+export const InfoIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8q0 .425.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22"
+      ></path>
     </svg>
   );
 };

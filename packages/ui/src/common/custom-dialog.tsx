@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 
 import { cn } from '@ecommerce/lib';
-import { CloseIcon } from '../icons/close-icon';
+import { CloseIcon } from '../icons/action-icon';
 
 type FullDialogProps = {
   children: ReactNode;

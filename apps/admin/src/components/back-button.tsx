@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { LeftArrowIcon } from '@ecommerce/ui';
 import { useRouter } from 'next/navigation';
+
+import { ChevronIcon } from '@ecommerce/ui';
 
 const MyComponent = () => {
   const router = useRouter();
@@ -10,7 +11,7 @@ const MyComponent = () => {
       className="flex cursor-pointer items-center gap-1"
       onClick={() => router.back()}
     >
-      <LeftArrowIcon className="h-5 w-5 fill-gray-400" />
+      <ChevronIcon className="h-5 w-5 fill-gray-400" direction="left" />
       Back
     </div>
   );

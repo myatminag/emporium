@@ -14,8 +14,8 @@ import {
   BrandIcon,
   LoyaltyIcon,
   PermissionIcon,
-  DashboardOrderIcon,
-  DashboardSettingIcon,
+  SettingIcon,
+  OrderIcon,
 } from '@ecommerce/ui';
 
 const Sidebar = () => {
@@ -90,7 +90,7 @@ const Sidebar = () => {
               type="button"
               className="hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:hover:bg-transparent dark:hs-accordion-active:text-white flex w-full items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-start text-base text-neutral-700 hover:bg-gray-100"
             >
-              <DashboardOrderIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
+              <OrderIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
               Categories
               <ChevronIcon
                 className="hs-accordion-active:rotate-180 ms-auto size-5"
@@ -162,7 +162,7 @@ const Sidebar = () => {
               type="button"
               className="hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:hover:bg-transparent dark:hs-accordion-active:text-white flex w-full items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-start text-base text-neutral-700 hover:bg-gray-100"
             >
-              <DashboardOrderIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
+              <OrderIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
               Orders
               <ChevronIcon
                 className="hs-accordion-active:rotate-180 ms-auto size-5"
@@ -237,7 +237,7 @@ const Sidebar = () => {
               )}
               href="/setting"
             >
-              <DashboardSettingIcon
+              <SettingIcon
                 className={cn('size-5 flex-shrink-0 text-neutral-700', {
                   'text-primary': pathname.startsWith('/setting'),
                 })}

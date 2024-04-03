@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { UploadImageIcon, CameraIcon, Button } from '@ecommerce/ui';
+import { ImageUploadIcon, CameraIcon, Button } from '@ecommerce/ui';
 
 import TextInput from 'packages/ui/src/common/input';
 import { useForm } from 'react-hook-form';
@@ -64,7 +64,7 @@ const BrandMutationForm = () => {
               className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2 text-black/50 "
               onClick={handleClickUploadBrandCover}
             >
-              <UploadImageIcon className="h-12 w-12" />
+              <ImageUploadIcon className="h-12 w-12" />
               <p className="font-semibold">Upload Brand Cover Image</p>
             </div>
           )}
