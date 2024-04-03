@@ -32,7 +32,7 @@ module.exports = {
         'wip',
       ],
     ],
-    'type-case': [2, 'always', ['lowerCase']],
+    'type-case': [2, 'always', 'lower-case'],
     'subject-case': [2, 'always', ['lower-case', 'kebab-case']],
     'subject-empty': [2, 'never'],
     'scope-case': [2, 'always', ['lower-case', 'kebab-case']],
