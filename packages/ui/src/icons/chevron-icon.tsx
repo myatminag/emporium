@@ -1,6 +1,5 @@
 import { SVGProps } from 'react';
 
-// utils
 import { cn } from '@ecommerce/lib';
 
 export const ChevronIcon = ({
