@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Button, StarIcon, ReorderIcon, Dialog } from '@ecommerce/ui';
+import { Button, PopularIcon, ReorderIcon, Dialog } from '@ecommerce/ui';
 import { HSOverlay } from 'preline/preline';
 
 import { brands } from '../../../../data/dummy';
@@ -24,7 +24,7 @@ const BrandPopularOptions = () => {
         type="button"
         className="bg-secondary-500/10 text-secondary-500 flex items-center justify-center gap-1 rounded-lg px-2 py-2 md:px-6"
       >
-        <StarIcon className="h-5 w-5" />
+        <PopularIcon className="h-5 w-5" />
         <span className="mt-.5 md:text-md text-sm font-medium">
           View Popular Brands
         </span>
@@ -49,7 +49,7 @@ const BrandPopularOptions = () => {
                   />
                   <h3 className="text-md ml-4 font-medium">{brand.title}</h3>
                 </div>
-                <StarIcon className="h-5 w-5 text-yellow-500" />
+                <PopularIcon className="h-5 w-5 text-yellow-500" />
               </div>
             </Reorder.Item>
           ))}

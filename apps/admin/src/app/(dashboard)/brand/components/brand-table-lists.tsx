@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { brands } from '../../../../data/dummy';
 import BrandDescription from './brand-description';
-import { EditIcon, StarIcon, TranshIcon } from '@ecommerce/ui';
+import { EditIcon, PopularIcon, TrashIcon } from '@ecommerce/ui';
 import { cn } from '@ecommerce/lib';
 import BrandAction from './brand-action';
 
@@ -33,7 +33,7 @@ const BrandTableLists = () => {
                 className="whitespace-nowrap p-2 font-medium text-gray-900 md:px-6 md:py-4 dark:text-white"
               >
                 <div className="inline-flex items-center gap-2">
-                  <StarIcon
+                  <PopularIcon
                     className={cn(
                       'h-5 w-5',
                       item.popular ? 'text-secondary-500' : 'text-gray-400',

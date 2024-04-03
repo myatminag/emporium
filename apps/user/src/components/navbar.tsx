@@ -8,7 +8,7 @@ import {
   MainLogo,
   WishListIcon,
   UserIcon,
-  HamburgerMenuIcon,
+  HamburgerIcon,
 } from 'packages/ui/src';
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm">
       <div className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-x-3">
-          <HamburgerMenuIcon className="block lg:hidden" />
+          <HamburgerIcon className="block lg:hidden" />
           <div className="flex items-center gap-x-1.5">
             <MainLogo className="hidden lg:block" />
             <h3 className="text-primary text-xl font-medium">Emporium</h3>

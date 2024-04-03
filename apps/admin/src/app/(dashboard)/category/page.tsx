@@ -5,7 +5,7 @@ import {
   CircleIcon,
   InputSearch,
   EditRoundIcon,
-  TranshIcon,
+  TrashIcon,
 } from '@ecommerce/ui';
 import qs from 'query-string';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -76,7 +76,7 @@ const Category = () => {
               </div>
               <div className="flex cursor-pointer gap-2">
                 <EditRoundIcon className="mt-0.5 h-5 w-5 fill-gray-500" />
-                <TranshIcon className="h-5 w-5 text-gray-500" />
+                <TrashIcon className="h-5 w-5 text-gray-500" />
               </div>
             </div>
           ))}

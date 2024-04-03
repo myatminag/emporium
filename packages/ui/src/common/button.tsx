@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
 
-import { LoaderIcon } from '../icons/loader-icon';
+import { LoaderIcon } from '../icons/action-icon';
 import { cn } from '@ecommerce/lib';
 
 const buttonVariants = cva(
