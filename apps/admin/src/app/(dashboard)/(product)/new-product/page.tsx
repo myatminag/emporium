@@ -17,10 +17,12 @@ const NewProductPage = () => {
           <ManageVariants />
         </div>
 
-        <div className="space-y-4 lg:col-span-1">
-          <Pricing />
+        <div className="lg:col-span-1">
+          <div className="space-y-4 lg:sticky lg:top-28">
+            <Pricing />
 
-          <ProductOptions />
+            <ProductOptions />
+          </div>
         </div>
       </div>
 

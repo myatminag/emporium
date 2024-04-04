@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useCallback, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 
@@ -20,18 +20,48 @@ export const CustomDialog = ({
   dialogTitle,
   onClose,
 }: FullDialogProps) => {
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        dialogRef.current &&
+        !dialogRef.current.contains(event.target as Element)
+      ) {
+        onClose();
+      }
+    },
+    [onClose],
+  );
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('mouseup', handleClickOutside);
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.removeEventListener('mouseup', handleClickOutside);
+    };
+  }, [open, handleClickOutside]);
+
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {open &&
         createPortal(
-          <div
+          <dialog
+            open={open}
+            aria-modal="true"
+            aria-labelledby={dialogTitle}
             className={cn(
               'fixed inset-0 z-50 flex h-screen w-screen items-center justify-center transition-colors duration-75',
               open ? 'visible bg-black/40' : 'invisible',
             )}
           >
             <motion.div
+              ref={dialogRef}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
@@ -39,7 +69,10 @@ export const CustomDialog = ({
               className="min-w-md relative rounded-xl bg-white"
             >
               <div className="flex items-center justify-between border-b p-4">
-                <h3 className="text-heading font-medium text-neutral-700">
+                <h3
+                  id={dialogTitle}
+                  className="text-heading font-medium text-neutral-700"
+                >
                   {dialogTitle}
                 </h3>
                 <button
@@ -53,7 +86,7 @@ export const CustomDialog = ({
               </div>
               {children}
             </motion.div>
-          </div>,
+          </dialog>,
           document.body,
         )}
     </>
