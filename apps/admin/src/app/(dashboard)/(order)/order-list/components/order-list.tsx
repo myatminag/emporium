@@ -195,7 +195,7 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="/order-detail/wefg-12tg">
+                    <Link className="block p-4" href="/order-list/wefg-12tg">
                       <p className="text-primary text-base font-medium hover:underline">
                         #wefg-12tg
                       </p>

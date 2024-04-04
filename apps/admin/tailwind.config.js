@@ -27,6 +27,7 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: '#FF3951',
+          100: '#FAE9EA',
         },
         neutral: {
           DEFAULT: '#F9FAFB',
@@ -41,7 +42,7 @@ module.exports = {
           900: '#111827',
         },
         success: {
-          DEFAULT: '#1EB564',
+          DEFAULT: '#5BBC2D',
         },
         warning: {
           DEFAULT: '',
