@@ -1,8 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { dialogSlice } from './features/general/dialog-state.slice';
+import { categorySlice } from './features/category/category-state.slice';
 
 export const appStore = () => {
   return configureStore({
-    reducer: {},
+    devTools: true,
+    reducer: {
+      dialog: dialogSlice.reducer,
+      category: categorySlice.reducer,
+    },
   });
 };
 

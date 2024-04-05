@@ -1,33 +1,28 @@
 'use client';
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import PageWrapper from '../../../../components/page-wrapper';
 import BackButton from '../../../../components/back-button';
 import Image from 'next/image';
-import {
-  Button,
-  CameraPlus,
-  CircleIcon,
-  CustomDialog,
-  EditRoundIcon,
-} from '@ecommerce/ui';
+import { Button, CameraPlus, CircleIcon, EditRoundIcon } from '@ecommerce/ui';
 
-import { useForm } from 'react-hook-form';
 import OverlayCamera from '../../../../components/overlay-camer';
 import { motion } from 'framer-motion';
 import { brands } from '../../../../data/dummy';
+import SubCategoryForm from './components/sub-category-form';
+import { useAppDispatch } from '../../../../store/hook';
+import {
+  DialogEvent,
+  setDialogEvent,
+} from '../../../../store/features/general/dialog-state.slice';
+import { useCategoryState } from '../../../../store/features/category/category-state.slice';
+import AssociateBrandForm from './components/associate-brand-from';
 
 const CategoryDetail = ({ params }: { params: { id: string } }) => {
-  let dummy = '/dummy/dummy-cover.png';
-  let dummyCateLogo = '/dummy/apple.png';
-  const form = useForm();
-  const dialogId = 'select-brand-lists-id';
+  const dummy = '/dummy/dummy-cover.png';
+  const dummyCateLogo = '/dummy/apple.png';
+  const dispatch = useAppDispatch();
+  const { associateBrands } = useCategoryState();
 
-  const [selectedBrandLists, setSelectedBrandLists] = useState<string[]>([]);
-  const [openDial, setOpenDial] = useState(false);
-
-  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelectedBrandLists((prev) => [...prev, e.target.value]);
-  };
   return (
     <>
       <PageWrapper>
@@ -35,7 +30,7 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
           <BackButton />
           <h1 className="py-2 pl-2 text-2xl font-semibold leading-9">View</h1>
           <div className="mt-4 h-full rounded-tl-lg rounded-tr-lg bg-white p-4">
-            <div className="bg-primary-100 relative h-[200px] w-full rounded-md">
+            <div className="relative h-[200px] w-full rounded-md bg-blue-200">
               {dummy ? (
                 <>
                   <Image
@@ -58,7 +53,7 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
               )}
             </div>
             <div className="relative">
-              <div className="bg-primary-100 relative z-30 m-1 mx-auto -mt-16 h-32 w-32 overflow-hidden rounded-full border-4 border-solid border-white">
+              <div className="relative z-30 m-1 mx-auto -mt-16 h-32 w-32 overflow-hidden rounded-full border-4 border-solid border-white bg-blue-200">
                 {dummyCateLogo ? (
                   <Image
                     src={dummyCateLogo}
@@ -106,19 +101,21 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
                 htmlFor="category-name"
                 className="text-md font-normal text-gray-300"
               >
-                {`Associate Brand(${selectedBrandLists.length})`}
+                {`Associate Brand(${associateBrands.length})`}
               </label>
               <div className="relative flex items-center justify-start gap-2">
                 <motion.div
                   whileTap={{ scale: 0.9 }}
-                  data-hs-overlay={`#${dialogId}`}
                   className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border-2 border-dashed border-gray-400"
+                  onClick={() =>
+                    dispatch(setDialogEvent(DialogEvent.associateDialog))
+                  }
                 >
-                  <div className="bg-primary-100 flex h-10 w-10 items-center justify-center rounded-full">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-200">
                     <CircleIcon className="h-5 w-5 text-blue-500" />
                   </div>
                 </motion.div>
-                {selectedBrandLists.map((data) => {
+                {associateBrands.map((data) => {
                   const currImg = brands.find(
                     (brand) => brand.id == Number(data),
                   );
@@ -140,11 +137,13 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
                 htmlFor="category-name"
                 className="text-md font-normal text-gray-300"
               >
-                {`Sub Category(${selectedBrandLists.length})`}
+                {`Sub Category(${associateBrands.length})`}
               </label>
               <Button
-                onClick={() => setOpenDial(true)}
-                className="bg-primary-100 my-3 max-w-[230px] gap-2 px-3 text-blue-500 "
+                onClick={() =>
+                  dispatch(setDialogEvent(DialogEvent.subCategoryDialog))
+                }
+                className="my-3 max-w-[230px] gap-2 bg-blue-200 px-3 text-blue-500 "
               >
                 <CircleIcon className="h-5 w-5" />
                 Add New Sub Category
@@ -154,45 +153,11 @@ const CategoryDetail = ({ params }: { params: { id: string } }) => {
         </div>
       </PageWrapper>
 
-      <CustomDialog
-        dialogTitle="Hello"
-        open={openDial}
-        onClose={() => setOpenDial(false)}
-      >
-        <div className="relative h-[300px] w-[600px] overflow-y-scroll">
-          <ul className="space-y-4">
-            {brands.map((brand) => (
-              <li
-                key={brand.title}
-                className="flex items-center justify-start gap-4"
-              >
-                <input
-                  value={brand.id}
-                  onChange={handleChangeInput}
-                  type="checkbox"
-                  className="h-4 w-4"
-                />
-                <Image
-                  src={brand.url}
-                  alt={brand.title}
-                  width={40}
-                  height={40}
-                />
-                <h3 className="text-md">{brand.title}</h3>
-              </li>
-            ))}
-          </ul>
-          <div className="center sticky bottom-0 z-20 w-full gap-2 bg-white py-1">
-            <Button
-              className="w-40 bg-blue-500 px-3 py-1 text-white"
-              data-hs-overlay={`#${dialogId}`}
-            >
-              Save
-            </Button>
-            <Button className="w-40 px-3 py-1">Cancel</Button>
-          </div>
-        </div>
-      </CustomDialog>
+      {/*associate brands*/}
+      <AssociateBrandForm />
+
+      {/* sub category dialog */}
+      <SubCategoryForm />
     </>
   );
 };

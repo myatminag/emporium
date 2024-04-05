@@ -29,6 +29,9 @@ module.exports = {
           DEFAULT: '#FF3951',
           100: '#FAE9EA',
         },
+        blue: {
+          200: '#ECEFFF',
+        },
         neutral: {
           DEFAULT: '#F9FAFB',
           100: '#F3F4F6',
