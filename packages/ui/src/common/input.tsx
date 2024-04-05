@@ -7,7 +7,13 @@ type InputProps = {
   type: string;
   fieldName: string;
 };
-const TextInput = ({ label, control, errors, type, fieldName }: InputProps) => {
+export const TextInput = ({
+  label,
+  control,
+  errors,
+  type,
+  fieldName,
+}: InputProps) => {
   return (
     <div>
       <div className="relative">
@@ -19,7 +25,7 @@ const TextInput = ({ label, control, errors, type, fieldName }: InputProps) => {
               <input
                 type={type}
                 id={fieldName}
-                className="text-md peer block w-full appearance-none rounded-lg border border-gray-400 bg-transparent px-2.5 pb-1.5 pt-3 text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                className="text-md peer block w-full appearance-none rounded-lg border border-[#E6E6E6] bg-transparent px-2.5 pb-1.5 pt-3 text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
                 placeholder=" "
                 {...field}
               />
@@ -41,5 +47,3 @@ const TextInput = ({ label, control, errors, type, fieldName }: InputProps) => {
     </div>
   );
 };
-
-export default TextInput;

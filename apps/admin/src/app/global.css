@@ -9,7 +9,7 @@
     display: flex;
   }
 }
-/* 
+/*
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -27,3 +27,18 @@
   opacity: 80%;
   border-radius: 8px;
 } */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.center-x {
+  @apply  -translate-x-1/2 left-1/2;
+}
+.center-y {
+  @apply top-1/2 -translate-y-1/2
+}
