@@ -103,28 +103,12 @@ const Sidebar = () => {
             >
               <ul className="ps-2 pt-2">
                 <li>
-                  <a
+                  <Link
                     className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
+                    href="/category-list"
                   >
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Link 3
-                  </a>
+                    Category List
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -144,16 +128,40 @@ const Sidebar = () => {
             </Link>
           </li>
 
-          <li>
-            <div
-              className={cn(
-                'flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100',
-              )}
+          <li className="hs-accordion" id="account-accordion">
+            <button
+              type="button"
+              className="hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:hover:bg-transparent dark:hs-accordion-active:text-white flex w-full items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-start text-base text-neutral-700 hover:bg-gray-100"
             >
-              <BannerIcon
-                className={cn('size-5 flex-shrink-0 text-neutral-700')}
+              <BannerIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
+              Marketing
+              <ChevronIcon
+                className="hs-accordion-active:rotate-180 ms-auto size-5"
+                direction="down"
               />
-              Banner & Ads
+            </button>
+            <div
+              id="account-accordion-sub"
+              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+            >
+              <ul className="ps-2 pt-2">
+                <li>
+                  <Link
+                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    href="/banner-and-ads"
+                  >
+                    Banner & Ads
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    href="/coupon"
+                  >
+                    Coupon
+                  </Link>
+                </li>
+              </ul>
             </div>
           </li>
 
@@ -187,7 +195,8 @@ const Sidebar = () => {
           </li>
 
           <li>
-            <div
+            <Link
+              href="/member-point"
               className={cn(
                 'flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100',
               )}
@@ -196,7 +205,7 @@ const Sidebar = () => {
                 className={cn('size-5 flex-shrink-0 text-neutral-700')}
               />
               Member Point
-            </div>
+            </Link>
           </li>
 
           <li>
@@ -216,7 +225,8 @@ const Sidebar = () => {
           <hr />
 
           <li>
-            <div
+            <Link
+              href="/role-and-permission"
               className={cn(
                 'flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100',
               )}
@@ -225,7 +235,7 @@ const Sidebar = () => {
                 className={cn('size-5 flex-shrink-0 text-neutral-700')}
               />
               Role & Permission
-            </div>
+            </Link>
           </li>
 
           <li>
