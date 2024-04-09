@@ -8,17 +8,17 @@ import RevenueChart from './components/revenue-chart';
 const Dashboard = () => {
   return (
     <div className="space-y-4 px-4 py-8 lg:px-6">
-      {/* <Stats /> */}
+      <Stats />
 
       {/*<RevenueChart />*/}
 
       <div className="grid gap-4 lg:grid-cols-3">
         {/* <TopSellingCategories /> */}
 
-        {/* <BestSellingProducts /> */}
+        <BestSellingProducts />
       </div>
 
-      {/* <RecentOrder /> */}
+      <RecentOrder />
     </div>
   );
 };

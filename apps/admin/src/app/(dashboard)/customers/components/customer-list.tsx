@@ -3,13 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import {
-  ThreeDotsIcon,
-  FilterIcon,
-  SearchIcon,
-  PopularIcon,
-  SuccessIcon,
-} from '@ecommerce/ui';
+import { ThreeDotsIcon, FilterIcon, SearchIcon } from '@ecommerce/ui';
 
 const Status = [
   { id: 1, name: 'All' },
@@ -17,11 +11,11 @@ const Status = [
   { id: 3, name: 'Unpublish' },
 ];
 
-const ProductList = () => {
+const CustomerList = () => {
   return (
     <div className="mx-auto max-w-[85rem] overflow-x-auto lg:max-w-full">
       <div className="inline-block min-w-full align-middle">
-        <p className="text-heading mb-4 font-medium">Product Lists (1,105)</p>
+        <p className="text-heading mb-4 font-medium">Customer Lists (1,105)</p>
         <div className="overflow-hidden rounded-sm border border-gray-200 bg-white shadow-sm">
           <div className="space-y-2 border-b border-gray-200 p-4 dark:border-gray-700">
             <div className="flex items-center justify-between">
@@ -36,8 +30,8 @@ const ProductList = () => {
                   type="text"
                   id="hs-as-table-product-review-search"
                   name="hs-as-table-product-review-search"
-                  className="block w-72 rounded-sm border-gray-200 px-3 py-2 ps-11 text-base focus:border-blue-500 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
-                  placeholder="Search Products..."
+                  className="focus:border-primary focus:ring-primary block w-72 rounded-sm border-gray-200 px-3 py-2 ps-11 text-base disabled:pointer-events-none disabled:opacity-50"
+                  placeholder="Search customers..."
                 />
                 <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-4">
                   <SearchIcon className="size-4 text-gray-400" />
@@ -45,14 +39,6 @@ const ProductList = () => {
               </div>
 
               <div className="flex justify-end gap-x-2">
-                <button
-                  id="hs-as-table-table-filter-dropdown"
-                  type="button"
-                  className="inline-flex items-center gap-x-2 rounded-sm border border-gray-200 bg-white px-3 py-2 text-base font-medium text-gray-800 shadow-sm hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:bg-slate-900 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                >
-                  <PopularIcon className="size-3.5 flex-shrink-0" />
-                  View Popular
-                </button>
                 <div
                   className="hs-dropdown relative inline-block [--placement:bottom-right]"
                   data-hs-dropdown-auto-close="inside"
@@ -99,37 +85,37 @@ const ProductList = () => {
                 <th scope="col" className="px-4 py-3 text-start"></th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <span className="text-base uppercase tracking-wide text-neutral-700">
-                    Product
+                    Profile
                   </span>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <span className="text-base uppercase tracking-wide text-neutral-700">
-                    Category
+                    Name
                   </span>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <span className="text-base uppercase tracking-wide text-neutral-700">
-                    SKU
+                    Email
                   </span>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <div className="flex items-center gap-x-2">
                     <span className="text-base uppercase tracking-wide text-neutral-700">
-                      Status
+                      Phone No
                     </span>
                   </div>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <div className="flex items-center gap-x-2">
                     <span className="text-base uppercase tracking-wide text-neutral-700">
-                      Stock
+                      Spent
                     </span>
                   </div>
                 </th>
                 <th scope="col" className="px-4 py-3 text-start">
                   <div className="flex items-center gap-x-2">
                     <p className="text-base uppercase tracking-wide text-neutral-700">
-                      Price
+                      Join On
                     </p>
                   </div>
                 </th>
@@ -155,56 +141,44 @@ const ProductList = () => {
                         className="text-primary shrink-0 cursor-pointer rounded border-gray-400 disabled:pointer-events-none disabled:opacity-50"
                         id="hs-default-checkbox"
                       />
-                      <button type="button">
-                        <PopularIcon className="size-5 flex-shrink-0 text-neutral-500" />
-                      </button>
                     </div>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
-                      <div className="flex items-center gap-x-4">
-                        <Image
-                          width={100}
-                          height={100}
-                          className="size-[44px] flex-shrink-0 rounded-sm"
-                          src="https://images.unsplash.com/photo-1594032194509-0056023973b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=320&q=80"
-                          alt="Image Description"
-                        />
-                        <div>
-                          <p className="block text-base text-neutral-700">
-                            Calvin Klein T-shirts
-                          </p>
-                          <p className="text-sm text-neutral-400">2 Variants</p>
-                        </div>
-                      </div>
+                      <Image
+                        width={100}
+                        height={100}
+                        className="size-[44px] flex-shrink-0 rounded-sm"
+                        src="https://images.unsplash.com/photo-1594032194509-0056023973b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=320&q=80"
+                        alt="Image Description"
+                      />
+                    </Link>
+                  </td>
+                  <td className="size-px whitespace-nowrap align-middle">
+                    <Link className="block p-4" href="/customers/1">
+                      <p className="text-base text-neutral-700">Adam Taylor</p>
                     </Link>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
-                      <p className="text-base text-neutral-700">Fashion</p>
+                      <p className="text-base text-neutral-700">
+                        adamtalyor@gmail.com
+                      </p>
                     </Link>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
-                      <p className="text-base text-neutral-700">2384741241</p>
-                    </Link>
-                  </td>
-                  <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
-                      <span className="text-success inline-flex items-center gap-x-1 rounded-full bg-teal-100 px-2 py-1 text-base font-medium">
-                        <SuccessIcon className="size-4" />
-                        Publish
-                      </span>
-                    </Link>
-                  </td>
-                  <td className="size-px whitespace-nowrap align-middle">
-                    <Link className="block p-4" href="#">
-                      <p className="text-base text-neutral-700">23</p>
+                      <p className="text-base text-neutral-700">+95987654321</p>
                     </Link>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
                     <Link className="block p-4" href="#">
                       <p className="text-base text-neutral-700">34,000 Ks</p>
+                    </Link>
+                  </td>
+                  <td className="size-px whitespace-nowrap align-middle">
+                    <Link className="block p-4" href="#">
+                      <p className="text-base text-neutral-700">May 15, 2024</p>
                     </Link>
                   </td>
                   <td className="size-px whitespace-nowrap align-middle">
@@ -226,19 +200,7 @@ const ProductList = () => {
                               className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-gray-800 hover:bg-gray-100"
                               href="#"
                             >
-                              Publish
-                            </a>
-                            <a
-                              className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-gray-800 hover:bg-gray-100"
-                              href="#"
-                            >
-                              Unpublish
-                            </a>
-                            <a
-                              className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-base text-gray-800 hover:bg-gray-100"
-                              href="#"
-                            >
-                              Edit
+                              Ban
                             </a>
                           </div>
                           <div className="py-2 first:pt-0 last:pb-0">
@@ -263,4 +225,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default CustomerList;
