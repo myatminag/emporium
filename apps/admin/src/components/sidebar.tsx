@@ -200,7 +200,8 @@ const Sidebar = () => {
           </li>
 
           <li>
-            <div
+            <Link
+              href="/customers"
               className={cn(
                 'flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100',
               )}
@@ -209,7 +210,7 @@ const Sidebar = () => {
                 className={cn('size-5 flex-shrink-0 text-neutral-700')}
               />
               Customers
-            </div>
+            </Link>
           </li>
 
           <hr />

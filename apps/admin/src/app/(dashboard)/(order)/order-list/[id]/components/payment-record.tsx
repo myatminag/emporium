@@ -9,7 +9,7 @@ import PaymentOne from '../../../../../../assets/temp/payment_one.png';
 const PaymentRecord = () => {
   return (
     <div className="w-full rounded-sm border bg-white shadow-sm">
-      <p className="text-heading border-b border-gray-200 p-4 font-medium">
+      <p className="text-heading border-b border-gray-200 p-4 font-medium text-neutral-700">
         Payment Record
       </p>
       <div className="space-y-2 p-4">
