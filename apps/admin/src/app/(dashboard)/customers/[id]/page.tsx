@@ -1,4 +1,4 @@
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from 'packages/ui/src';
 import CustomerInfo from './components/customer-info';
 import CustomerOrders from './components/customer-orders';
 import CustomerStats from './components/customer-stats';

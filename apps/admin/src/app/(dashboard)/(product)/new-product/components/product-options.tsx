@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { CircleIcon, ThreeDotsIcon, CustomDialog } from '@ecommerce/ui';
+import { CircleIcon, ThreeDotsIcon, CustomDialog } from 'packages/ui/src';
 
 type DialogState = {
   'add-options': boolean;

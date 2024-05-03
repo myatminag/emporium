@@ -1,14 +1,15 @@
+import Image from 'next/image';
 import React, { ChangeEvent } from 'react';
-import { Button, CustomDialog } from '@ecommerce/ui';
+
 import {
   DialogEvent,
   setDialogEvent,
   useDialogState,
-} from '../../../../../store/features/general/dialog-state.slice';
-import { useAppDispatch } from '../../../../../store/hook';
-import { setAssociateBrand } from '../../../../../store/features/category/category-state.slice';
-import Image from 'next/image';
-import { brands } from '../../../../../data/dummy';
+} from '@app/store/features/general/dialog-state.slice';
+import { brands } from '@app/data/dummy';
+import { useAppDispatch } from '@app/store/hook';
+import { Button, CustomDialog } from 'packages/ui/src';
+import { setAssociateBrand } from '@app/store/features/category/category-state.slice';
 
 const AssociateBrandForm = () => {
   const { dialog } = useDialogState();

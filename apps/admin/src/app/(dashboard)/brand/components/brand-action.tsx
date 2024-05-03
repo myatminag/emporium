@@ -1,5 +1,6 @@
 import React from 'react';
-import { EditIcon, TrashIcon } from '@ecommerce/ui';
+
+import { EditIcon, TrashIcon } from 'packages/ui/src';
 
 const BrandAction = () => {
   return (

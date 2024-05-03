@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -12,30 +14,47 @@ import {
   TogglePasswordIcon,
 } from 'packages/ui/src';
 
-const loginValidationSchema = z.object({
+const loginSchema = z.object({
   email: z.string().min(1, { message: 'Email is required' }),
   password: z.string().min(8, { message: 'Password is required' }),
 });
 
+type loginSchemaType = z.infer<typeof loginSchema>;
+
 const LoginForm = () => {
+  const router = useRouter();
+
   const {
     formState: { errors },
     handleSubmit,
     register,
-  } = useForm<z.infer<typeof loginValidationSchema>>({
-    resolver: zodResolver(loginValidationSchema),
-    defaultValues: {
-      email: '',
-      password: '',
-    },
+  } = useForm<loginSchemaType>({
+    resolver: zodResolver(loginSchema),
   });
 
-  const handleLogin = (data: z.infer<typeof loginValidationSchema>) => {
-    console.log(data);
+  const handleSignIn: SubmitHandler<loginSchemaType> = async (
+    data: loginSchemaType,
+  ) => {
+    try {
+      const res = await signIn('credentials', {
+        email: data.email,
+        password: data.password,
+        callbackUrl: '/dashboard',
+        redirect: false,
+      });
+
+      if (res?.error) {
+        console.log(res.error);
+      } else {
+        router.replace('/dashboard');
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit(handleLogin)} className="w-full space-y-6">
+    <form onSubmit={handleSubmit(handleSignIn)} className="w-full space-y-6">
       <div className="space-y-2">
         <label
           htmlFor="email"

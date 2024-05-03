@@ -1,15 +1,17 @@
 'use client';
+
 import React from 'react';
-import { Button, CustomDialog } from '@ecommerce/ui';
 import 'react-advanced-cropper/dist/style.css';
-import { useAppDispatch } from '../../../../store/hook';
+import { Tab } from '@headlessui/react';
+
+import { cn } from 'packages/lib/src';
+import { Button, CustomDialog } from 'packages/ui/src';
+import { useAppDispatch } from '@app/store/hook';
 import {
   DialogEvent,
   setDialogEvent,
   useDialogState,
-} from '../../../../store/features/general/dialog-state.slice';
-import { Tab } from '@headlessui/react';
-import { cn } from '@ecommerce/lib';
+} from '@app/store/features/general/dialog-state.slice';
 import WebBrandForm from './web-brand-form';
 import MobileBrandForm from './brand-mobile-form';
 

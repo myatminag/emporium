@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { CustomDialog, CircleIcon } from '@ecommerce/ui';
+import { CustomDialog, CircleIcon } from 'packages/ui/src';
 
 const AddStaff = () => {
   const [dialog, setDialog] = useState(false);

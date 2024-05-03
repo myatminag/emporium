@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { SuccessIcon } from '@ecommerce/ui';
+import { SuccessIcon } from 'packages/ui/src';
 
 const CustomerOrders = () => {
   return (

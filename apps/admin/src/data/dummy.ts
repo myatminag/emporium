@@ -65,7 +65,7 @@ export const brands = [
   },
 ];
 
-export const categoryLists = [
+export const categories = [
   {
     id: 1,
     name: 'Electronics',

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ThreeDotsIcon, FilterIcon, SearchIcon } from '@ecommerce/ui';
+import { ThreeDotsIcon, FilterIcon, SearchIcon } from 'packages/ui/src';
 
 const Status = [
   { id: 1, name: 'All' },

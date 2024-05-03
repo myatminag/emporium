@@ -1,6 +1,6 @@
 'use client';
 
-import { ProductStatIcon, OrderStatIcon } from '@ecommerce/ui';
+import { ProductStatIcon, OrderStatIcon } from 'packages/ui/src';
 
 const CustomerStats = () => {
   return (

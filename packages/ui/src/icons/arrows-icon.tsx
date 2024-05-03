@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-import { cn } from '@ecommerce/lib';
+import { cn } from 'packages/lib/src';
 
 export const ChevronIcon = ({
   direction,

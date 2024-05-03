@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { CustomDialog, TrashIcon } from '@ecommerce/ui';
+import { CustomDialog, TrashIcon } from 'packages/ui/src';
 
 const ActionButton = () => {
   const [dialog, setDialog] = useState(false);

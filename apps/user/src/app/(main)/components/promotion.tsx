@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from 'packages/ui/src';
 import ProductImg from '../../../assets/image 34.png';
 
 const Promotion = () => {

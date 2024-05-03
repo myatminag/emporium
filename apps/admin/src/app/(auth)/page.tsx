@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
-import SignInIcon from '../../components/icons/login-icon';
-import LoginForm from '../../components/auth/login-form';
+import LoginForm from '@app/components/auth/login-form';
+import SignInIcon from '@app/components/icons/signin-icon';
 
 export const metadata: Metadata = {
-  title: 'Login',
+  title: 'SignIn',
 };
 
-const LoginPage = () => {
+const SignInPage = () => {
   return (
     <main className="min-h-screen lg:grid lg:grid-cols-2">
       <div className="bg-primary flex flex-col items-center justify-center px-4 py-8">
@@ -26,4 +26,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignInPage;

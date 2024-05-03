@@ -1,5 +1,6 @@
 import React from 'react';
-import { CameraIcon } from '@ecommerce/ui';
+
+import { CameraIcon } from 'packages/ui/src';
 
 const OverlayCamera = () => {
   return (

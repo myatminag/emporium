@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { ReactNode } from 'react';
 import { GoogleMap, useJsApiLoader, Libraries } from '@react-google-maps/api';
 
-import { LocationIcon } from '@ecommerce/ui';
+import { LocationIcon } from 'packages/ui/src';
 
 const libraries = ['places', 'drawing', 'geometry'];
 

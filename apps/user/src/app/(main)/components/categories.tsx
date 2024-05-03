@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from 'packages/ui/src';
 import Category from '../../../assets/dummy/category.png';
 
 const Categories = () => {

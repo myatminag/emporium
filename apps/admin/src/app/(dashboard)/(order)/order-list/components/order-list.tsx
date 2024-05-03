@@ -7,7 +7,7 @@ import {
   FilterIcon,
   SearchIcon,
   SuccessIcon,
-} from '@ecommerce/ui';
+} from 'packages/ui/src';
 
 const PaymentStatus = [
   { id: 1, name: 'All' },

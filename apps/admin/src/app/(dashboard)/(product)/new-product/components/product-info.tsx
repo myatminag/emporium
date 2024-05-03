@@ -3,7 +3,7 @@
 import { useState, Fragment } from 'react';
 import { Combobox, Transition } from '@headlessui/react';
 
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from 'packages/ui/src';
 
 const people = [
   { id: 1, name: 'Wade Cooper' },

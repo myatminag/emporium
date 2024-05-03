@@ -1,6 +1,6 @@
-import { ChevronIcon } from '@ecommerce/ui';
 import RoleList from './components/role-list';
 import AddStaff from './components/add-staff';
+import { ChevronIcon } from 'packages/ui/src';
 
 const RoleAndPermission = () => {
   return (

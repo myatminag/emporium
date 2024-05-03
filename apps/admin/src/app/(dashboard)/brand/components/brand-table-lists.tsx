@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { brands } from '../../../../data/dummy';
-import BrandDescription from './brand-description';
-import { EditIcon, PopularIcon, TrashIcon } from '@ecommerce/ui';
-import { cn } from '@ecommerce/lib';
+
+import { cn } from 'packages/lib/src';
+import { brands } from '@app/data/dummy';
 import BrandAction from './brand-action';
+import { PopularIcon } from 'packages/ui/src';
+import BrandDescription from './brand-description';
 
 const BrandTableLists = () => {
   return (

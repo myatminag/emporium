@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Button } from '@ecommerce/ui';
+import { Button } from 'packages/ui/src';
 
 const forgotPwSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address.' }),

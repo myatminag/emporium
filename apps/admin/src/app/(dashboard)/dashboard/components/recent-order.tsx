@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { ChevronIcon, ThreeDotsIcon } from '@ecommerce/ui';
+import { ChevronIcon, ThreeDotsIcon } from 'packages/ui/src';
 
 const RecentOrder = () => {
   return (

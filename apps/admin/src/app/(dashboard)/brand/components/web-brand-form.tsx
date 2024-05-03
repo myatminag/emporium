@@ -1,14 +1,15 @@
-import React, { useRef, useState } from 'react';
 import Image from 'next/image';
+import React, { useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
+
 import {
   Button,
   CameraIcon,
   TextAreaInput,
   TextInput,
   ImageUploadIcon,
-} from '@ecommerce/ui';
-import OverlayCamera from '../../../../components/overlay-camer';
-import { useForm } from 'react-hook-form';
+} from 'packages/ui/src';
+import OverlayCamera from '@app/components/overlay-camera';
 
 const WebBrandForm = () => {
   let brandLogo;

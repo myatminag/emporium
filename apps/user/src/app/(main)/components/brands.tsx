@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from 'packages/ui/src';
 import Brand from '../../../assets/dummy/brand.png';
 
 const Brands = () => {

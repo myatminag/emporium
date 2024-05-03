@@ -1,13 +1,14 @@
 import Image from 'next/image';
-import OverlayCamera from '../../../../../components/overlay-camer';
-import { CameraPlus, CustomDialog, TextInput } from '@ecommerce/ui';
 import { useForm } from 'react-hook-form';
-import { useAppDispatch } from '../../../../../store/hook';
+
+import OverlayCamera from '@app/components/overlay-camera';
+import { useAppDispatch } from '@app/store/hook';
 import {
   DialogEvent,
   setDialogEvent,
   useDialogState,
-} from '../../../../../store/features/general/dialog-state.slice';
+} from '@app/store/features/general/dialog-state.slice';
+import { CameraPlus, CustomDialog, TextInput } from 'packages/ui/src';
 
 const SubCategoryForm = () => {
   let subCategoryImage;
