@@ -6,7 +6,7 @@ import {
   OrderStatIcon,
   UserStatIcon,
   ProductStatIcon,
-} from '@ecommerce/ui';
+} from 'packages/ui/src';
 
 const Stats = () => {
   return (

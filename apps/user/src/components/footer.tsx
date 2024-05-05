@@ -10,7 +10,7 @@ import {
   TwitterIcon,
   AppStoreIcon,
   PlayStoreIcon,
-} from '@ecommerce/ui';
+} from 'packages/ui/src';
 
 const data = [
   {

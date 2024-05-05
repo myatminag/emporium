@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import { dialogSlice } from './features/general/dialog-state.slice';
 import { categorySlice } from './features/category/category-state.slice';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@ecommerce/ui';
+import { Button } from 'packages/ui/src';
 
 const OtpForm = () => {
   return (

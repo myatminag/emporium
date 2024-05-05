@@ -5,7 +5,7 @@ import {
   PackedIcon,
   DeliveredIcon,
   DeliveringIcon,
-} from '@ecommerce/ui';
+} from 'packages/ui/src';
 
 const OrderStatus = () => {
   return (

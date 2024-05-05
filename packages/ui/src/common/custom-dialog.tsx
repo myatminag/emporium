@@ -4,7 +4,7 @@ import { ReactNode, useCallback, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 
-import { cn } from '@ecommerce/lib';
+import { cn } from 'packages/lib/src';
 import { CloseIcon } from '../icons/action-icon';
 
 type FullDialogProps = {

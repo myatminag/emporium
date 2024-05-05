@@ -1,6 +1,6 @@
 'use client';
 
-import { ImageUploadIcon } from '@ecommerce/ui';
+import { ImageUploadIcon } from 'packages/ui/src';
 
 const ProductImage = () => {
   return (

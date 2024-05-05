@@ -16,7 +16,11 @@
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "rootDir": "../../",
+    "paths": {
+      "@app/*": ["apps/admin/src/*"]
+    }
   },
   "include": [
     "**/*.ts",

@@ -3,7 +3,7 @@ import {
   RefundIcon,
   PaymentIcon,
   SupportIcon,
-} from '@ecommerce/ui';
+} from 'packages/ui/src';
 
 const Service = () => {
   return (

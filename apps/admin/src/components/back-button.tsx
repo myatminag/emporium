@@ -1,8 +1,9 @@
 'use client';
+
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-import { ChevronIcon } from '@ecommerce/ui';
+import { ChevronIcon } from 'packages/ui/src';
 
 const MyComponent = () => {
   const router = useRouter();

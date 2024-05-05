@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { NotiIcon } from '@ecommerce/ui';
+import { NotiIcon } from 'packages/ui/src';
 
 const Header = () => {
   return (

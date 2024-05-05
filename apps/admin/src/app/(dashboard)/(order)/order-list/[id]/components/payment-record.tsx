@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 
-import { SuccessIcon } from '@ecommerce/ui';
-import WaveMoney from '../../../../../../assets/images/aya_pay.png';
-import PaymentOne from '../../../../../../assets/temp/payment_one.png';
+import { SuccessIcon } from 'packages/ui/src';
+import PaymentOne from '@app/assets/temp/payment_one.png';
+import WaveMoney from '@app/assets/images/aya_pay.png';
 
 const PaymentRecord = () => {
   return (

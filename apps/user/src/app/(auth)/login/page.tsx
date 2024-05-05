@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
-import { MainLogo } from '@ecommerce/ui';
+
+import { MainLogo } from 'packages/ui/src';
 
 const Login = () => {
   return (

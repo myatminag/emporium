@@ -1,21 +1,22 @@
 'use client';
-import React from 'react';
-import PageWrapper from '../../../../components/page-wrapper';
-import BackButton from '../../../../components/back-button';
-import Image from 'next/image';
-import { Button, CameraPlus, CircleIcon, EditRoundIcon } from '@ecommerce/ui';
 
-import OverlayCamera from '../../../../components/overlay-camer';
+import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { brands } from '../../../../data/dummy';
+
+import { brands } from '@app/data/dummy';
+import BackButton from '@app/components/back-button';
+import PageWrapper from '@app/components/page-wrapper';
+import OverlayCamera from '@app/components/overlay-camera';
 import SubCategoryForm from './components/sub-category-form';
-import { useAppDispatch } from '../../../../store/hook';
+import { useAppDispatch } from '@app/store/hook';
 import {
   DialogEvent,
   setDialogEvent,
-} from '../../../../store/features/general/dialog-state.slice';
-import { useCategoryState } from '../../../../store/features/category/category-state.slice';
+} from '@app/store/features/general/dialog-state.slice';
 import AssociateBrandForm from './components/associate-brand-from';
+import { Button, CameraPlus, CircleIcon, EditRoundIcon } from 'packages/ui/src';
+import { useCategoryState } from '@app/store/features/category/category-state.slice';
 
 const CategoryDetail = ({ params }: { params: { id: string } }) => {
   const dummy = '/dummy/dummy-cover.png';

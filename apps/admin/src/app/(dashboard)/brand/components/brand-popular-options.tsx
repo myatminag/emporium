@@ -1,18 +1,22 @@
 'use client';
+
+import Image from 'next/image';
 import React, { useState } from 'react';
-import { Button, PopularIcon, ReorderIcon, Dialog } from '@ecommerce/ui';
+import { Reorder } from 'framer-motion';
 import { HSOverlay } from 'preline/preline';
 
-import { brands } from '../../../../data/dummy';
-import Image from 'next/image';
-import { Reorder } from 'framer-motion';
+import { brands } from '@app/data/dummy';
+import { Button, PopularIcon, ReorderIcon, Dialog } from 'packages/ui/src';
 
 const BrandPopularOptions = () => {
   const [listItem, setListItem] = useState(brands);
+
   const popularDialogId = 'popular-dialog-id';
+
   const dialogElementById = document.getElementById(
     popularDialogId,
   ) as HTMLElement;
+
   const handleColeDialog = () => {
     HSOverlay.close(dialogElementById);
   };

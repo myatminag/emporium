@@ -1,7 +1,7 @@
 import './global.css';
 import { Roboto } from 'next/font/google';
 
-import { PrelineScript } from '@ecommerce/lib';
+import { PrelineScript } from 'packages/lib/src';
 
 import Provider from './provider';
 

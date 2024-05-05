@@ -1,8 +1,10 @@
 'use client';
-import React, { ChangeEvent, useState } from 'react';
-import { SearchIcon } from '@ecommerce/ui';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+
+import React, { ChangeEvent } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import qs from 'query-string';
+
+import { SearchIcon } from 'packages/ui/src';
 
 const BrandSearch = () => {
   const router = useRouter();

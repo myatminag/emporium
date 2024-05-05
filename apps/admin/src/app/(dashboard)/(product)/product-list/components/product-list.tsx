@@ -9,7 +9,7 @@ import {
   SearchIcon,
   PopularIcon,
   SuccessIcon,
-} from '@ecommerce/ui';
+} from 'packages/ui/src';
 
 const Status = [
   { id: 1, name: 'All' },

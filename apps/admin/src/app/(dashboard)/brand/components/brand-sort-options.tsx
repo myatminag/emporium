@@ -1,5 +1,6 @@
 import React from 'react';
-import { SortIcon } from '@ecommerce/ui';
+
+import { SortIcon } from 'packages/ui/src';
 
 const sortLists = [
   { id: 1, title: 'Sorting A to Z' },

@@ -1,15 +1,14 @@
 'use client';
-import React from 'react';
-import { CircleIcon, Dialog } from '@ecommerce/ui';
-import BrandMutationForm from './brand-mutation-form';
 
-import { HSOverlay } from 'preline/preline';
+import React from 'react';
+
+import BrandMutationForm from './brand-mutation-form';
 import {
   DialogEvent,
   setDialogEvent,
-  useDialogState,
-} from '../../../../store/features/general/dialog-state.slice';
-import { useAppDispatch } from '../../../../store/hook';
+} from '@app/store/features/general/dialog-state.slice';
+import { useAppDispatch } from '@app/store/hook';
+import { CircleIcon } from 'packages/ui/src';
 
 const CreateBrand = () => {
   const dispatch = useAppDispatch();

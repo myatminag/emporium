@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { cn } from '@ecommerce/lib';
 import {
   DashboardIcon,
   ChevronIcon,
@@ -16,7 +15,9 @@ import {
   PermissionIcon,
   SettingIcon,
   OrderIcon,
-} from '@ecommerce/ui';
+  CategoryIcon,
+} from 'packages/ui/src';
+import { cn } from 'packages/lib/src';
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -90,7 +91,7 @@ const Sidebar = () => {
               type="button"
               className="hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:hover:bg-transparent dark:hs-accordion-active:text-white flex w-full items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-start text-base text-neutral-700 hover:bg-gray-100"
             >
-              <OrderIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
+              <CategoryIcon className="hs-accordion-active:text-primary size-5 flex-shrink-0" />
               Categories
               <ChevronIcon
                 className="hs-accordion-active:rotate-180 ms-auto size-5"
