@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import LoginForm from '@app/components/auth/login-form';
+import LoginForm from './components/login-form';
 import SignInIcon from '@app/components/icons/signin-icon';
 
 export const metadata: Metadata = {
