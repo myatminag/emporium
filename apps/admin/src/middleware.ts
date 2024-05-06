@@ -1,6 +1,6 @@
 import { getToken } from 'next-auth/jwt';
-import { NextRequestWithAuth, withAuth } from 'next-auth/middleware';
 import { NextResponse } from 'next/server';
+import { NextRequestWithAuth, withAuth } from 'next-auth/middleware';
 
 export default withAuth(
   async function middleware(req: NextRequestWithAuth) {
@@ -9,11 +9,10 @@ export default withAuth(
     const isAuthorized = !!token;
     const pathname = req.nextUrl.pathname;
 
-    if (pathname.startsWith('/')) {
+    if (pathname === '/') {
       if (isAuthorized) {
         return NextResponse.redirect(new URL('/dashboard', req.url));
       }
-
       return null;
     }
 
@@ -35,5 +34,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ['/', '/dashboard/:path*'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };

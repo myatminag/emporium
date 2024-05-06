@@ -6,8 +6,11 @@ type AdminSignIn = {
 };
 
 type SignInResponse = {
-  otpRef: string;
+  accessToken: string;
+  refreshToken: string;
   userId: string;
+  email: string;
+  exp: number;
 };
 
 export const signInService = async (

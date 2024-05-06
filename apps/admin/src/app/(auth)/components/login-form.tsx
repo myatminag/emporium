@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -24,6 +24,9 @@ type signInSchemaType = z.infer<typeof signInSchema>;
 
 const LoginForm = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
 
   const [isPending, startTransition] = useTransition();
 
@@ -43,7 +46,7 @@ const LoginForm = () => {
         const res = await signIn('credentials', {
           email: data.email,
           password: data.password,
-          callbackUrl: '/dashboard',
+          callbackUrl,
           redirect: false,
         });
 
