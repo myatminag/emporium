@@ -2,45 +2,52 @@
 
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useTransition, useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { SubmitHandler, useForm } from 'react-hook-form';
 import * as z from 'zod';
+import { toast } from 'react-toastify';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTransition } from 'react';
 
 import {
   InfoIcon,
   Button,
   PhoneIcon,
-  TogglePasswordIcon,
+  VisibleIcon,
+  InvisibleIcon,
 } from 'packages/ui/src';
 
 const signInSchema = z.object({
-  email: z.string().min(1, { message: 'Email is required' }).email(),
-  password: z.string().min(4, { message: 'Password is required' }),
+  email: z
+    .string()
+    .min(1, { message: 'Email is required!' })
+    .email({ message: 'Invalid Email!' }),
+  password: z
+    .string()
+    .min(1, { message: 'Password is required!' })
+    .min(4, { message: 'Password must be at least 4 characters!' }),
 });
 
-type signInSchemaType = z.infer<typeof signInSchema>;
+type SignInSchemaType = z.infer<typeof signInSchema>;
 
-const LoginForm = () => {
+const SignInForm = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
 
+  const [isVisible, setIsVisible] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   const {
     formState: { errors },
     handleSubmit,
     register,
-  } = useForm<signInSchemaType>({
+  } = useForm<SignInSchemaType>({
     resolver: zodResolver(signInSchema),
   });
 
-  const handleSignIn: SubmitHandler<signInSchemaType> = async (
-    data: signInSchemaType,
-  ) => {
+  const handleSignIn: SubmitHandler<SignInSchemaType> = async (data) => {
     startTransition(async () => {
       try {
         const res = await signIn('credentials', {
@@ -51,12 +58,12 @@ const LoginForm = () => {
         });
 
         if (res?.error) {
-          console.log(res.error);
+          toast.error(res.error);
         } else {
           router.replace('/dashboard');
         }
       } catch (err) {
-        console.log(err);
+        toast.error('Internal server error!');
       }
     });
   };
@@ -100,7 +107,7 @@ const LoginForm = () => {
         <div className="relative">
           <input
             id="password"
-            type="password"
+            type={isVisible ? 'text' : 'password'}
             {...register('password')}
             disabled={isPending}
             className="block w-full rounded-sm border-gray-200 px-3 py-2 text-base disabled:pointer-events-none disabled:opacity-50"
@@ -108,10 +115,14 @@ const LoginForm = () => {
           />
           <button
             type="button"
-            data-hs-toggle-password='{"target": "#password"}'
+            onClick={() => setIsVisible(!isVisible)}
             className="absolute end-0 top-0 p-3.5 focus:outline-none disabled:pointer-events-none"
           >
-            <TogglePasswordIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            {isVisible ? (
+              <VisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            ) : (
+              <InvisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            )}
           </button>
           {errors.password && (
             <span className="text-sm text-red-500">
@@ -145,4 +156,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignInForm;

@@ -21,48 +21,58 @@ export const LogoutIcon = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export const TogglePasswordIcon = (props: SVGProps<SVGSVGElement>) => {
+export const VisibleIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
       fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      viewBox="0 0 24 24"
       {...props}
     >
       <path
-        className="hs-password-active:hidden"
-        d="M9.88 9.88a3 3 0 1 0 4.24 4.24"
-      />
+        stroke="#191C1F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M12 4.25C4.5 4.25 1.5 12 1.5 12s3 7.75 10.5 7.75S22.5 12 22.5 12s-3-7.75-10.5-7.75z"
+      ></path>
       <path
-        className="hs-password-active:hidden"
-        d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"
-      />
+        stroke="#191C1F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M12 15a3 3 0 100-6 3 3 0 000 6z"
+      ></path>
+    </svg>
+  );
+};
+
+export const InvisibleIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+      {...props}
+    >
       <path
-        className="hs-password-active:hidden"
-        d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"
-      />
-      <line
-        className="hs-password-active:hidden"
-        x1={2}
-        x2={22}
-        y1={2}
-        y2={22}
-      />
+        stroke="#191C1F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M4.5 3.75l15 16.5M14.522 14.775a3.75 3.75 0 01-5.044-5.55"
+      ></path>
       <path
-        className="hs-password-active:block hidden"
-        d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"
-      />
-      <circle
-        className="hs-password-active:block hidden"
-        cx={12}
-        cy={12}
-        r={3}
-      />
+        stroke="#191C1F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M6.938 6.431C3.112 8.363 1.5 12 1.5 12s3 6.75 10.5 6.75c1.757.014 3.493-.39 5.063-1.181M19.556 15.853C21.6 14.025 22.5 12 22.5 12s-3-6.75-10.5-6.75c-.65-.001-1.3.052-1.94.16M12.703 8.316a3.74 3.74 0 013.028 3.328"
+      ></path>
     </svg>
   );
 };

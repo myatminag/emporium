@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import OtpForm from './components/otp-form';
+import OtpForm from './components/OtpForm';
 import OtpIcon from '../../../components/icons/opt-icon';
 
 export const metadata: Metadata = {

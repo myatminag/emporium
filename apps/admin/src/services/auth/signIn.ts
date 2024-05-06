@@ -1,4 +1,4 @@
-import { httpService } from '../http-service';
+import { authHttpService } from '../httpService';
 
 type AdminSignIn = {
   email: string;
@@ -16,6 +16,7 @@ type SignInResponse = {
 export const signInService = async (
   data: AdminSignIn,
 ): Promise<SignInResponse> => {
-  const res = await httpService.post('/auth/admin-login', data);
-  return res.data;
+  return await authHttpService
+    .post('/admin-login', data)
+    .then((res) => res.data);
 };

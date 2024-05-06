@@ -1,35 +1,18 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { Button, VisibleIcon, InvisibleIcon } from 'packages/ui/src';
+import { useResetPassword } from '../useResetPassword';
 
-import { Button, TogglePasswordIcon } from 'packages/ui/src';
-
-const resetPasswordSchema = z
-  .object({
-    password: z.string().min(8, 'Password must be at least 8 characters'),
-    cpassword: z.string().min(8, 'Password must be at least 8 characters'),
-  })
-  .refine((data) => data.password === data.cpassword, {
-    message: 'Passwords do not match.',
-    path: ['cpassword'],
-  });
-
-type ResetPasswordSchemaType = z.infer<typeof resetPasswordSchema>;
-
-const PasswordForm = () => {
+const ResetPasswordForm = () => {
   const {
-    formState: { errors },
+    isVisible,
+    errors,
+    isPending,
+    setIsVisible,
     handleSubmit,
     register,
-  } = useForm<ResetPasswordSchemaType>({
-    resolver: zodResolver(resetPasswordSchema),
-  });
-
-  const handleResetPassword = (data: ResetPasswordSchemaType) => {
-    console.log(data);
-  };
+    handleResetPassword,
+  } = useResetPassword();
 
   return (
     <form
@@ -46,17 +29,24 @@ const PasswordForm = () => {
         <div className="relative">
           <input
             id="password"
-            type="password"
+            type={isVisible.password ? 'text' : 'password'}
             {...register('password')}
+            disabled={isPending}
             className="block w-full rounded-sm border-gray-200 px-3 py-2 text-base disabled:pointer-events-none disabled:opacity-50"
             placeholder="Enter your new password"
           />
           <button
             type="button"
-            data-hs-toggle-password='{"target": "#password"}'
+            onClick={() =>
+              setIsVisible((prev) => ({ ...prev, password: !prev.password }))
+            }
             className="absolute end-0 top-0 p-3.5 focus:outline-none disabled:pointer-events-none"
           >
-            <TogglePasswordIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            {isVisible.password ? (
+              <VisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            ) : (
+              <InvisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            )}
           </button>
           {errors.password && (
             <span className="text-sm text-red-500">
@@ -75,17 +65,24 @@ const PasswordForm = () => {
         <div className="relative">
           <input
             id="cpassword"
-            type="password"
+            type={isVisible.cpassword ? 'text' : 'password'}
             {...register('cpassword')}
+            disabled={isPending}
             className="block w-full rounded-sm border-gray-200 px-3 py-2 text-base disabled:pointer-events-none disabled:opacity-50"
             placeholder="Enter your confirm password"
           />
           <button
             type="button"
-            data-hs-toggle-password='{"target": "#cpassword"}'
+            onClick={() =>
+              setIsVisible((prev) => ({ ...prev, cpassword: !prev.cpassword }))
+            }
             className="absolute end-0 top-0 p-3.5 focus:outline-none disabled:pointer-events-none"
           >
-            <TogglePasswordIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            {isVisible.cpassword ? (
+              <VisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            ) : (
+              <InvisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
+            )}
           </button>
           {errors.cpassword && (
             <span className="text-sm text-red-500">
@@ -98,6 +95,7 @@ const PasswordForm = () => {
         type="submit"
         variant="primary"
         size="sm"
+        disabled={isPending}
         className="w-full text-base"
       >
         Reset Password
@@ -106,4 +104,4 @@ const PasswordForm = () => {
   );
 };
 
-export default PasswordForm;
+export default ResetPasswordForm;

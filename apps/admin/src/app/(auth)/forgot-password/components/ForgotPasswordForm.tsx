@@ -1,29 +1,11 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-
 import { Button } from 'packages/ui/src';
-
-const forgotPwSchema = z.object({
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
-});
-
-type ForgotPwSchemaType = z.infer<typeof forgotPwSchema>;
+import { useForgotPassword } from '../useForgotPassword';
 
 const ForgotPasswordForm = () => {
-  const {
-    formState: { errors },
-    handleSubmit,
-    register,
-  } = useForm<ForgotPwSchemaType>({
-    resolver: zodResolver(forgotPwSchema),
-  });
-
-  const handleForgotPassword = (data: ForgotPwSchemaType) => {
-    console.log(data);
-  };
+  const { isPending, errors, handleSubmit, register, handleForgotPassword } =
+    useForgotPassword();
 
   return (
     <form
@@ -40,6 +22,7 @@ const ForgotPasswordForm = () => {
         <input
           id="email"
           type="email"
+          disabled={isPending}
           {...register('email')}
           className="block w-full rounded-sm border-gray-200 px-3 py-2 text-base shadow-sm disabled:pointer-events-none disabled:opacity-50"
           placeholder="Enter your email"
@@ -52,6 +35,7 @@ const ForgotPasswordForm = () => {
         type="submit"
         variant="primary"
         size="sm"
+        disabled={isPending}
         className="w-full rounded-sm text-base"
       >
         Recover Password

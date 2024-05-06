@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { SessionProvider } from 'next-auth/react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { appStore, AppStore } from '../store/store';
 
@@ -37,7 +39,21 @@ const AppProvider = ({
     <SessionProvider refetchOnWindowFocus={false} session={session}>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} position="right" />
-        <Provider store={storeRef.current}>{children}</Provider>
+        <Provider store={storeRef.current}>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
+          {children}
+        </Provider>
       </QueryClientProvider>
     </SessionProvider>
   );

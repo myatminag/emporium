@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-import ForgotPasswordForm from './components/forgot-pw-form';
+import ForgotPasswordForm from './components/ForgotPasswordForm';
 import ForgotPwIcon from '../../../components/icons/forgot-pw-icon';
 
 export const metadata: Metadata = {
@@ -19,9 +19,9 @@ const ForgotPasswordPage = () => {
       </div>
       <div className="flex min-h-[calc(100vh-342px)] flex-col items-center justify-center space-y-5 p-4 lg:mx-auto lg:w-full lg:max-w-md lg:rounded-xl">
         <div className="space-y-2.5">
-          <h1 className="block text-center text-2xl font-semibold text-neutral-700">
-            Forgot password
-          </h1>
+          <h2 className="text-center text-xl font-semibold leading-9 tracking-tight text-neutral-700">
+            Forgot Password
+          </h2>
           <p className="text-center text-base text-neutral-400">
             Enter the email address that associated with your account.
           </p>

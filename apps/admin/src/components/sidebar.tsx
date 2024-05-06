@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { signOut } from 'next-auth/react';
 
 import {
   DashboardIcon,
@@ -259,7 +260,10 @@ const Sidebar = () => {
           </li>
 
           <li>
-            <div className="flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100">
+            <div
+              onClick={() => signOut({ callbackUrl: '/' })}
+              className="flex items-center gap-x-3.5 rounded-sm px-2.5 py-2 text-base text-neutral-700 hover:bg-gray-100"
+            >
               <LogoutIcon className="size-5 flex-shrink-0 text-neutral-700" />
               Logout
             </div>
