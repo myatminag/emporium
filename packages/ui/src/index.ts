@@ -1,4 +1,9 @@
-// ui
+// ============ UI ============ //
+
+// inputs
+export * from './inputs/Input';
+export * from './inputs/PasswordInput';
+
 export * from './common/button';
 export * from './common/input';
 export * from './common/carousel';

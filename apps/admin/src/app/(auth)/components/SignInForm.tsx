@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useTransition, useState } from 'react';
+import { useTransition } from 'react';
 import { signIn } from 'next-auth/react';
 import * as z from 'zod';
 import { toast } from 'react-toastify';
@@ -13,8 +13,8 @@ import {
   InfoIcon,
   Button,
   PhoneIcon,
-  VisibleIcon,
-  InvisibleIcon,
+  Input,
+  PasswordInput,
 } from 'packages/ui/src';
 
 const signInSchema = z.object({
@@ -36,7 +36,6 @@ const SignInForm = () => {
 
   const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
 
-  const [isVisible, setIsVisible] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   const {
@@ -70,67 +69,26 @@ const SignInForm = () => {
 
   return (
     <form onSubmit={handleSubmit(handleSignIn)} className="w-full space-y-6">
-      <div className="space-y-2">
-        <label
-          htmlFor="email"
-          className="inline-block text-base font-medium text-neutral-700"
-        >
-          Email
-        </label>
-        <input
-          id="email"
-          type="email"
-          {...register('email')}
-          disabled={isPending}
-          className="block w-full rounded-sm border-gray-200 px-3 py-2 text-base shadow-sm disabled:pointer-events-none disabled:opacity-50"
-          placeholder="Enter your email"
-        />
-        {errors.email && (
-          <span className="text-sm text-red-500">{errors.email?.message}</span>
-        )}
-      </div>
-      <div className="space-y-2">
-        <div className="item flex justify-between">
-          <label
-            htmlFor="password"
-            className="inline-block text-base font-medium text-neutral-700"
-          >
-            Password
-          </label>
-          <Link
-            href="/forgot-password"
-            className="text-primary text-base font-medium decoration-2 hover:underline"
-          >
-            Forgot Password?
-          </Link>
-        </div>
-        <div className="relative">
-          <input
-            id="password"
-            type={isVisible ? 'text' : 'password'}
-            {...register('password')}
-            disabled={isPending}
-            className="block w-full rounded-sm border-gray-200 px-3 py-2 text-base disabled:pointer-events-none disabled:opacity-50"
-            placeholder="Enter your password"
-          />
-          <button
-            type="button"
-            onClick={() => setIsVisible(!isVisible)}
-            className="absolute end-0 top-0 p-3.5 focus:outline-none disabled:pointer-events-none"
-          >
-            {isVisible ? (
-              <VisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
-            ) : (
-              <InvisibleIcon className="size-4 flex-shrink-0 text-neutral-400" />
-            )}
-          </button>
-          {errors.password && (
-            <span className="text-sm text-red-500">
-              {errors.password?.message}
-            </span>
-          )}
-        </div>
-      </div>
+      <Input
+        label="Email"
+        htmlFor="email"
+        id="email"
+        type="email"
+        isPending={isPending}
+        errors={errors.email?.message}
+        placeholder="Enter your email"
+        register={register}
+      />
+      <PasswordInput
+        label="Password"
+        htmlFor="password"
+        id="password"
+        type="password"
+        isPending={isPending}
+        errors={errors.password?.message}
+        placeholder="Enter your password"
+        register={register}
+      />
       <Button
         type="submit"
         variant="primary"
@@ -140,7 +98,13 @@ const SignInForm = () => {
       >
         Sign In
       </Button>
-      <div className="mt-4 flex items-center justify-center gap-4">
+      <div className="mt-4 flex flex-col items-center justify-center gap-4">
+        <Link
+          href="/forgot-password"
+          className="text-primary text-base font-medium decoration-2 hover:underline"
+        >
+          Forgot Password?
+        </Link>
         <div className="flex justify-start gap-x-4">
           <div className=" flex items-center gap-x-2">
             <InfoIcon className="text-primary size-5" />
