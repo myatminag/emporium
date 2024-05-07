@@ -1,9 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@nextui-org/react';
 
-import { MainLogo } from 'packages/ui/src';
+import { MainLogo, Button } from 'packages/ui/src';
 
 const Login = () => {
   return (
