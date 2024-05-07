@@ -2,9 +2,9 @@ import { AxiosError } from 'axios';
 import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-import { signInService } from '@app/services/auth/sign-in';
+import { signInService } from '@app/services/auth/signIn';
 
-export const nextAuthOptions: NextAuthOptions = {
+export const options: NextAuthOptions = {
   pages: {
     signIn: '/',
   },
@@ -42,17 +42,24 @@ export const nextAuthOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    jwt: async ({ token, user }) => {
       if (user) {
         token.user = user;
       }
 
       return token;
     },
-    async session({ session, token }) {
-      session.user = token.user;
+    session: async ({ session, token }) => {
+      if (token) {
+        session.user.accessToken = token.user.accessToken;
+        session.user.refreshToken = token.user.refreshToken;
+        session.user.email = token.user.email;
+        session.user.userId = token.user.userId;
+        session.user.exp = token.user.exp;
+      }
 
       return session;
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };

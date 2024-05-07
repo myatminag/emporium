@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const ResetPwIcon = (props: SVGProps<SVGSVGElement>) => {
+const ResetPasswordIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -100,4 +100,4 @@ const ResetPwIcon = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export default ResetPwIcon;
+export default ResetPasswordIcon;

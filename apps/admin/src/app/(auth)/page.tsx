@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
-import LoginForm from './components/login-form';
+import SignInForm from './components/SignInForm';
 import SignInIcon from '@app/components/icons/signin-icon';
 
 export const metadata: Metadata = {
   title: 'SignIn',
 };
 
-const SignInPage = () => {
+const SignIn = () => {
   return (
     <main className="min-h-screen lg:grid lg:grid-cols-2">
       <div className="bg-primary flex flex-col items-center justify-center px-4 py-8">
@@ -20,10 +20,10 @@ const SignInPage = () => {
         <h2 className="text-center text-xl font-semibold leading-9 tracking-tight text-neutral-700">
           Sign in to your account
         </h2>
-        <LoginForm />
+        <SignInForm />
       </div>
     </main>
   );
 };
 
-export default SignInPage;
+export default SignIn;

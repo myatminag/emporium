@@ -4,7 +4,7 @@ import { getServerSession } from 'next-auth';
 import './global.css';
 import AppProvider from './provider';
 import { PrelineScript } from 'packages/lib/src';
-import { nextAuthOptions } from './(auth)/api/auth/[...nextauth]/auth-option';
+import { options } from './(auth)/api/auth/[...nextauth]/options';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -21,7 +21,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const authSession = await getServerSession(nextAuthOptions);
+  const authSession = await getServerSession(options);
 
   return (
     <html lang="en">
