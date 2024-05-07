@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Divider } from '@nextui-org/react';
 
 import {
   MainLogo,
@@ -120,7 +119,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <Divider className="my-8" />
+      <hr className="my-8" />
       <div className="lg:item flex flex-col items-center justify-center lg:flex-row lg:justify-between">
         <span className="text-sm text-gray-600 sm:text-center dark:text-gray-400">
           © {new Date().getFullYear()}{' '}
