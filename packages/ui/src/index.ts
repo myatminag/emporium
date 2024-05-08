@@ -1,18 +1,22 @@
 'use client';
 
-// ============ UI ============ //
-
 // inputs
 export * from './inputs/Input';
+export * from './inputs/SearchInput';
 export * from './inputs/PasswordInput';
 
-export * from './common/button';
+// buttons
+export * from './buttons/button';
+
+// overlays
+export * from './overlays/modal';
 export * from './common/input';
 export * from './common/carousel';
 export * from './common/textarea';
 export * from './common/dialog';
-export * from './common/input-search';
-export * from './common/custom-dialog';
+
+// common
+export * from './common/Pagination';
 
 // icons
 export * from './icons/logo-icon';

@@ -3,7 +3,7 @@ import { UseFormRegister, FieldValues, Path } from 'react-hook-form';
 
 import { VisibleIcon, InvisibleIcon } from '../icons/auth-icon';
 
-type InputProps<T extends FieldValues> = {
+type PasswordInputProps<T extends FieldValues> = {
   label: string;
   htmlFor: string;
   id: Path<T>;
@@ -23,7 +23,7 @@ export const PasswordInput = <T extends FieldValues>({
   errors,
   placeholder,
   register,
-}: InputProps<T>) => {
+}: PasswordInputProps<T>) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (

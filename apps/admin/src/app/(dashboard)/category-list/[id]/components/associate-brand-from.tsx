@@ -8,7 +8,7 @@ import {
 } from '@app/store/features/general/dialog-state.slice';
 import { brands } from '@app/data/dummy';
 import { useAppDispatch } from '@app/store/hook';
-import { Button, CustomDialog } from 'packages/ui/src';
+import { Button, Modal } from 'packages/ui/src';
 import { setAssociateBrand } from '@app/store/features/category/category-state.slice';
 
 const AssociateBrandForm = () => {
@@ -18,7 +18,7 @@ const AssociateBrandForm = () => {
     dispatch(setAssociateBrand(Number(e.target.value)));
   };
   return (
-    <CustomDialog
+    <Modal
       dialogTitle="Select Associated Brand(s)"
       open={dialog === DialogEvent.associateDialog}
       onClose={() => dispatch(setDialogEvent(DialogEvent.initial))}
@@ -51,7 +51,7 @@ const AssociateBrandForm = () => {
           <Button className="w-40 px-3 py-1">Cancel</Button>
         </div>
       </div>
-    </CustomDialog>
+    </Modal>
   );
 };
 

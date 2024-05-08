@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { CustomDialog, CircleIcon } from 'packages/ui/src';
+import { Modal, CircleIcon } from 'packages/ui/src';
 
 const AddStaff = () => {
   const [dialog, setDialog] = useState(false);
@@ -18,7 +18,7 @@ const AddStaff = () => {
         Add Staff
       </button>
 
-      <CustomDialog
+      <Modal
         dialogTitle="Add Staff"
         open={dialog}
         onClose={() => setDialog(false)}
@@ -156,7 +156,7 @@ const AddStaff = () => {
             </button>
           </div>
         </div>
-      </CustomDialog>
+      </Modal>
     </>
   );
 };
