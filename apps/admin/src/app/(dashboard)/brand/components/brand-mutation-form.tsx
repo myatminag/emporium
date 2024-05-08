@@ -5,7 +5,7 @@ import 'react-advanced-cropper/dist/style.css';
 import { Tab } from '@headlessui/react';
 
 import { cn } from 'packages/lib/src';
-import { Button, CustomDialog } from 'packages/ui/src';
+import { Button, Modal } from 'packages/ui/src';
 import { useAppDispatch } from '@app/store/hook';
 import {
   DialogEvent,
@@ -22,7 +22,7 @@ const BrandMutationForm = () => {
 
   return (
     <>
-      <CustomDialog
+      <Modal
         open={dialog === DialogEvent.createBrandDialog}
         dialogTitle="Create Brand"
         onClose={() => dispatch(setDialogEvent(DialogEvent.initial))}
@@ -59,7 +59,7 @@ const BrandMutationForm = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-      </CustomDialog>
+      </Modal>
       <Button
         className="text-md sticky bottom-0 z-10 w-full bg-blue-500 py-2 text-white"
         size="sm"

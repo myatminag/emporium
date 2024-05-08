@@ -1,11 +1,11 @@
-import ProductList from './components/product-list';
+import ProductTable from './components/ProductTable';
 
-const ProductListPage = () => {
+const ProductList = () => {
   return (
-    <div className="space-y-4 px-4 py-8 lg:px-6">
-      <ProductList />
+    <div className="p-4 lg:p-6">
+      <ProductTable />
     </div>
   );
 };
 
-export default ProductListPage;
+export default ProductList;

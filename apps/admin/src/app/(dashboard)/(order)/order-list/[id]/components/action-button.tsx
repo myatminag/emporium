@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { CustomDialog, TrashIcon } from 'packages/ui/src';
+import { Modal, TrashIcon } from 'packages/ui/src';
 
 const ActionButton = () => {
   const [dialog, setDialog] = useState(false);
@@ -21,7 +21,7 @@ const ActionButton = () => {
         </button>
       </div>
 
-      <CustomDialog
+      <Modal
         dialogTitle="Delete Order"
         open={dialog}
         onClose={() => setDialog(false)}
@@ -43,7 +43,7 @@ const ActionButton = () => {
             </button>
           </div>
         </div>
-      </CustomDialog>
+      </Modal>
     </>
   );
 };

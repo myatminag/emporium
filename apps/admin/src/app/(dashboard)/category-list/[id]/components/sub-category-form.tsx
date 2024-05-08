@@ -8,7 +8,7 @@ import {
   setDialogEvent,
   useDialogState,
 } from '@app/store/features/general/dialog-state.slice';
-import { CameraPlus, CustomDialog, TextInput } from 'packages/ui/src';
+import { CameraPlus, Modal, TextInput } from 'packages/ui/src';
 
 const SubCategoryForm = () => {
   let subCategoryImage;
@@ -17,7 +17,7 @@ const SubCategoryForm = () => {
   const { dialog } = useDialogState();
   const dispatch = useAppDispatch();
   return (
-    <CustomDialog
+    <Modal
       open={dialog === DialogEvent.subCategoryDialog}
       onClose={() => dispatch(setDialogEvent(DialogEvent.initial))}
       dialogTitle={'Add New Sub Category'}
@@ -47,7 +47,7 @@ const SubCategoryForm = () => {
           />
         </div>
       </div>
-    </CustomDialog>
+    </Modal>
   );
 };
 

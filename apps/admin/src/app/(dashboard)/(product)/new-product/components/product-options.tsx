@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { CircleIcon, ThreeDotsIcon, CustomDialog } from 'packages/ui/src';
+import { CircleIcon, ThreeDotsIcon, Modal } from 'packages/ui/src';
 
 type DialogState = {
   'add-options': boolean;
@@ -48,7 +48,7 @@ const ProductOptions = () => {
           <CircleIcon className="size-4" />
           Add Options
         </button>
-        <CustomDialog
+        <Modal
           dialogTitle="Add product option"
           open={openDialog['add-options']}
           onClose={() => handleCloseDialog('add-options')}
@@ -102,7 +102,7 @@ const ProductOptions = () => {
               </a>
             </div>
           </div>
-        </CustomDialog>
+        </Modal>
 
         <button
           type="button"
@@ -112,7 +112,7 @@ const ProductOptions = () => {
           <CircleIcon className="size-4" />
           Manage Variants
         </button>
-        <CustomDialog
+        <Modal
           dialogTitle="Product variants"
           open={openDialog['manage-variants']}
           onClose={() => handleCloseDialog('manage-variants')}
@@ -289,7 +289,7 @@ const ProductOptions = () => {
               </a>
             </div>
           </div>
-        </CustomDialog>
+        </Modal>
       </div>
     </div>
   );
